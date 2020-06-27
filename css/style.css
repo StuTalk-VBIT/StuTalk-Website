@@ -559,7 +559,7 @@ a:hover {
   width: 100%;
   z-index: 99;
   margin-bottom: 0;
-  padding: 10px;
+  padding: 5px;
 }
 
 .navigation .logo {
@@ -569,8 +569,8 @@ a:hover {
 }
 
 .navigation .logo img {
-  height: auto;
-  width: 140px;
+  height: 60px;
+  width: 60px;
 }
 
 .navigation .navigation-menu li.active a {
@@ -579,7 +579,7 @@ a:hover {
 
 .navigation .navigation-menu li a {
   font-size: 16px;
-  color: #737f8a;
+  color: #ffffff;
 }
 
 .navigation .navigation-menu li a:hover, .navigation .navigation-menu li a:focus {
@@ -588,12 +588,12 @@ a:hover {
 }
 
 .navbar-toggle {
-  border: 1px solid #000000;
+  border: 1px solid #ffffff;
   border-radius: 0;
 }
 
 .navbar-toggle span {
-  background: #000000;
+  background: #ffffff;
 }
 
 .bg-1 {
@@ -1095,6 +1095,7 @@ a:hover {
   border-top: 1px solid rgba(236, 239, 241, 0.07);
   margin-bottom: 40px;
   box-shadow: 2px 2px 5px rgba(44, 44, 44, 0.3), 13px 13px 0 rgba(255, 255, 255, 0.7);
+  background-color: #3d3d3d;
 }
 
 .service-block .service-icon {
