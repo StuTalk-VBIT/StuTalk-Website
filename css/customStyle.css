@@ -1,12 +1,12 @@
-.third_team_row
+.facord
 {
-  padding-left: 17%;
-  width: 110% !important;
+  margin-left: 37.5% !important;
+  width: 100% !important;
 }
-@media only screen and (max-device-width:800px)
+@media only screen and (max-device-width:768px)
 {
-  .third_team_row
+  .facord
   {
-    padding-left:0;
+    margin-left: 0 !important;
   }
 }
