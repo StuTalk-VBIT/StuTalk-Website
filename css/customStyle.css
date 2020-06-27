@@ -1,40 +1,39 @@
-.facord {
-  margin-left: 37.5% !important;
-  width: 100% !important;
-}
 @media only screen and (max-device-width: 768px) {
-  .facord {
-    margin-left: 0 !important;
-  }
   #anim {
     width: 100%; /* width of container */
     object-fit: cover;
   }
+  .faculty {
+    padding: 0 25% 0 25% !important;
+  }
 }
-#counter i {
-  color: #e54029;
+@media only screen and (max-device-width: 576px) {
+  .faculty {
+    padding: 0 5% 0 5% !important;
+  }
 }
+.faculty {
+  padding: 0 37.5% 0 37.5%;
+}
+
 .bg-one p {
   color: white;
-}
-.bg-one h3 {
-  color: #e54029;
 }
 #about p {
   color: white;
 }
-#about h2 {
-  color: #e54029;
-}
-#team-skills h2 {
-  color: #e54029;
-}
 .social-icon {
   background-color: #fefefe !important;
 }
-#contact-us h3 {
+#our-team .member-meta span,
+#our-faculty .member-meta span,
+#contact-us h3,
+#team-skills h2,
+#about h2,
+.bg-one h3,
+#counter i {
   color: #e54029;
 }
-#our-team .member-meta span {
-  color: #e54029;
+#contact-us {
+  background-color: #e6e6e6;
 }
