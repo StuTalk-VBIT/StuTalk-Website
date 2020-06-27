@@ -1,12 +1,39 @@
-.facord
-{
-  margin-left: 37.5% !important;
-  width: 100% !important;
-}
-@media only screen and (max-device-width:768px)
-{
-  .facord
-  {
-    margin-left: 0 !important;
+@media only screen and (max-device-width: 768px) {
+  #anim {
+    width: 100%; /* width of container */
+    object-fit: cover;
   }
+  .faculty {
+    padding: 0 25% 0 25% !important;
+  }
+}
+@media only screen and (max-device-width: 576px) {
+  .faculty {
+    padding: 0 5% 0 5% !important;
+  }
+}
+.faculty {
+  padding: 0 37.5% 0 37.5%;
+}
+
+.bg-one p {
+  color: white;
+}
+#about p {
+  color: white;
+}
+.social-icon {
+  background-color: #fefefe !important;
+}
+#our-team .member-meta span,
+#our-faculty .member-meta span,
+#contact-us h3,
+#team-skills h2,
+#about h2,
+.bg-one h3,
+#counter i {
+  color: #e54029;
+}
+#contact-us {
+  background-color: #e6e6e6;
 }
