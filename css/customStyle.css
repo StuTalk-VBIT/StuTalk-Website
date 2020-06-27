@@ -1,12 +1,13 @@
-.third_team_row
-{
+.third_team_row {
   padding-left: 17%;
   width: 110% !important;
 }
-@media only screen and (max-device-width:800px)
-{
-  .third_team_row
-  {
-    padding-left:0;
+@media only screen and (max-device-width: 800px) {
+  .third_team_row {
+    padding-left: 0;
+  }
+  #anim {
+    width: 100%; /* width of container */
+    object-fit: cover;
   }
 }
