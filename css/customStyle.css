@@ -11,3 +11,30 @@
     object-fit: cover;
   }
 }
+#counter i {
+  color: #e54029;
+}
+.bg-one p {
+  color: white;
+}
+.bg-one h3 {
+  color: #e54029;
+}
+#about p {
+  color: white;
+}
+#about h2 {
+  color: #e54029;
+}
+#team-skills h2 {
+  color: #e54029;
+}
+.social-icon {
+  background-color: #fefefe !important;
+}
+#contact-us h3 {
+  color: #e54029;
+}
+#our-team .member-meta span {
+  color: #e54029;
+}
