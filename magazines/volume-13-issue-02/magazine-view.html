@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="../css/magazine.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <title>StuTalk | VBIT</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <button type="button" class="btn btn-dark" id="prev">
+        Previous
+      </button>
+      <button type="button" class="btn btn-dark" id="next">Next</button>
+      <span class="page-info"
+        >Page <span id="page_num"></span> of <span id="page_count"></span>
+      </span>
+    </nav>
+    <div class="container-fluid text-center" id="the-container">
+      <canvas id="the-canvas" class="mt-5"></canvas>
+    </div>
+
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="./magazine-view.js"></script>
+  </body>
+</html>
