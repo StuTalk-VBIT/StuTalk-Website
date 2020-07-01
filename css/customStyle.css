@@ -1,7 +1,9 @@
 @media only screen and (max-device-width: 768px) {
   #anim {
-    width: 100%; /* width of container */
-    object-fit: cover;
+    width: 0; /* width of container */
+  }
+  #anim-mobile {
+    width: 100% !important;
   }
   .faculty {
     padding: 0 25% 0 25% !important;
@@ -19,6 +21,9 @@
   }
 }
 
+#anim-mobile {
+  width: 0;
+}
 .faculty {
   padding: 0 37.5% 0 37.5%;
 }

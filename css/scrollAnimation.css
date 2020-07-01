@@ -17,7 +17,7 @@
   border-bottom: 2px solid #fff;
   border-right: 2px solid #fff;
   z-index: 9;
-  left: 50%;
+  left: 49%;
   -webkit-transform: translate(-50%, 0%) rotate(45deg);
   -moz-transform: translate(-50%, 0%) rotate(45deg);
   transform: translate(-50%, 0%) rotate(45deg);
