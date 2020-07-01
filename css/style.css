@@ -1272,7 +1272,7 @@ a:hover {
   Testimonial section
 ==================================================================*/
 .testimonial:before {
-  background: rgba(42, 48, 55, 0.7);
+  background: rgba(42, 48, 55, 0.2);
 }
 
 .client-info {
@@ -1287,14 +1287,14 @@ a:hover {
 }
 
 .client-comment p {
-  color: #afbac4;
-  font-size: 18px;
+  color: #000000;
+  font-size: 20px;
 }
 
 .client-thumb img {
   border-radius: 50%;
   margin: 0 auto;
-  max-width: 115px;
+  max-width: 200px;
   width: 100%;
 }
 
