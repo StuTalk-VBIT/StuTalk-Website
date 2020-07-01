@@ -6,7 +6,7 @@
   .faculty {
     padding: 0 25% 0 25% !important;
   }
-  .odd{
+  .odd {
     padding: 0 25% 0 25% !important;
   }
 }
@@ -14,14 +14,15 @@
   .faculty {
     padding: 0 5% 0 5% !important;
   }
-  .odd{
+  .odd {
     padding: 0 5% 0 5% !important;
   }
 }
+
 .faculty {
   padding: 0 37.5% 0 37.5%;
 }
-.odd{
+.odd {
   padding: 0 37.5% 0 37.5%;
 }
 
