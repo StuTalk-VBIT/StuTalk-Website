@@ -35,6 +35,9 @@ h6 {
 p {
   font-family: "Quattrocento Sans", sans-serif;
 }
+.navbar {
+  border-radius: 0 !important;
+}
 
 /*=================================================================
   Basic Setup
