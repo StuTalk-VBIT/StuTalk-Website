@@ -3,3 +3,14 @@
   box-shadow: 10px 15px 10px grey;
   transition: width 2s;
 }
+.latest-magazine {
+  bottom: 0;
+  padding: 0px 0px !important;
+  height: 100vh !important;
+}
+.latest-magazine iframe {
+  height: 100%;
+}
+.latest-magazine #flipView {
+  padding: 15% !important;
+}
