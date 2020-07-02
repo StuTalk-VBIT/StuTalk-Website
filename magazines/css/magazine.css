@@ -1,3 +1,9 @@
+@media only screen and (max-device-width: 768px) {
+  .navbar-brand {
+    margin-left: -11% !important;
+  }
+}
+
 #the-canvas {
   height: 500px;
   box-shadow: 10px 15px 10px grey;
@@ -6,11 +12,15 @@
 .latest-magazine {
   bottom: 0;
   padding: 0px 0px !important;
-  height: 100vh !important;
+  height: 89.9vh !important;
 }
 .latest-magazine iframe {
   height: 100%;
 }
 .latest-magazine #flipView {
   padding: 15% !important;
+}
+.custom-navbar {
+  box-shadow: 0px 1px 25px black;
+  padding-left: 49% !important;
 }
