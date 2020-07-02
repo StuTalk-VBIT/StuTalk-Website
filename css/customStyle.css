@@ -75,3 +75,9 @@
 ::-webkit-scrollbar-thumb:hover {
   background: grey;
 }
+#testimonials h3{
+  color: #e54029;
+}
+#testimonials span,#testimonials p{
+  color: white;
+}

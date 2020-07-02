@@ -1295,9 +1295,9 @@ a:hover {
 }
 
 .client-thumb img {
-  border-radius: 50%;
+  border-radius: 20px;
   margin: 0 auto;
-  max-width: 200px;
+  max-width: 500px;
   width: 100%;
 }
 
