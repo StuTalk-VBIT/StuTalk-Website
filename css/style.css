@@ -1627,7 +1627,6 @@ a:hover {
 }
 
 .social-icon ul li a {
-  background-color: #26292e;
   border: 1px solid transparent;
   display: block;
   height: 70px;
@@ -1645,7 +1644,7 @@ a:hover {
 }
 
 .social-icon ul li a i {
-  color: #55606a;
+  color: #000000 !important;
   display: inline-block;
   font-size: 32px;
   line-height: 70px;
