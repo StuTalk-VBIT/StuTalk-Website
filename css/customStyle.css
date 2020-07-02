@@ -26,6 +26,9 @@
     padding: 0 5% 0 5% !important;
   }
 }
+.custom-navbar {
+  box-shadow: 0px 1px 25px black;
+}
 
 #anim-mobile {
   width: 0;
@@ -75,9 +78,10 @@
 ::-webkit-scrollbar-thumb:hover {
   background: grey;
 }
-#testimonials h3{
+#testimonials h3 {
   color: #e54029;
 }
-#testimonials span,#testimonials p{
+#testimonials span,
+#testimonials p {
   color: white;
 }
