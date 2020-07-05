@@ -37,6 +37,7 @@
 	<link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
 	<!-- Main Stylesheet -->
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/customStyleAbout.css">
 
 
 </head>
@@ -61,50 +62,49 @@
 	<!-- End Preloader
         ==================================== -->
 
-<!--
-  Fixed Navigation
-  ==================================== -->
-<header id="navigation" class="navbar navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <!-- responsive nav button -->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <!-- /responsive nav button -->
+				<!--
+			  Fixed Navigation
+			  ==================================== -->
+				<header id="navigation" class="navbar navigation custom-navbar">
+					<div class="container">
+						<div class="navbar-header">
+							<!-- responsive nav button -->
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<!-- /responsive nav button -->
 
-      <!-- logo -->
-			<a class="navbar-brand logo" href="#body">
-				<!-- <img src="images/logo.png" alt="Website Logo" /> -->
-				<img src="images/logo.png" alt="Website Logo" />
-			</a>
-      <!-- /logo -->
-    </div>
+							<!-- logo -->
+							<a class="navbar-brand logo" href="#body">
+								<!-- <img src="images/logo.png" alt="Website Logo" /> -->
+								<img src="images/logo.png" alt="Website Logo" />
+							</a>
+							<!-- /logo -->
+						</div>
 
-		<nav class="collapse navbar-collapse navbar-right" role="Navigation">
-			<ul id="nav" class="nav navbar-nav navigation-menu">
-							<li><a data-scroll href="#body">Home</a></li>
-							<li><a data-scroll href="#about">About Us</a></li>
-							<li><a data-scroll href="#magazines">Magazines</a></li>
-							<li><a data-scroll href="#portfolio">Brodcast Journalism</a></li>
-							<li><a data-scroll href="#our-team">Saadhya</a></li>
-							<li><a data-scroll href="#pricing">Team</a></li>
-							<li><a data-scroll href="#blog">Blog</a></li>
-							<li><a data-scroll href="#contact-us">Contact</a></li>
-					</ul>
-		</nav>
-		<!-- /main nav -->
+						<!-- main nav -->
+						<nav class="collapse navbar-collapse navbar-right" role="Navigation">
+							<ul id="nav" class="nav navbar-nav navigation-menu">
+			                <li><a data-scroll href="./index.html">Home</a></li>
+											<li><a data-scroll href="./index.html#upcoming-events">Upcoming Events</a></li>
+											<li><a data-scroll href="#blog" class="active-page">Blogs</a></li>
+											<li><a data-scroll href="#portfolio">Broadcast Journalism</a></li>
+											<li><a data-scroll href="./index.html#magazines">Magazines</a></li>
+											<li><a data-scroll href="./about-us.html">About Us</a></li>
+			            </ul>
+						</nav>
+						<!-- /main nav -->
 
-  </div>
-</header>
-<!--
-End Fixed Navigation
-==================================== -->
+					</div>
+				</header>
+				<!--
+			  End Fixed Navigation
+			  ==================================== -->
 
-<section id="blog" class="section">
+<section id="blog" class="section" style="padding-top:2%">
   <div class="container">
     <div class="row">
       <!-- section title -->
@@ -118,47 +118,104 @@ End Fixed Navigation
         <article class="col-md-4 col-sm-6 col-xs-12 mb-30 clearfix wow fadeInUp" data-wow-duration="500ms">
           <div class="post-block">
             <div class="media-wrapper">
-              <img src="images/blog/Trial.png" alt="amazing caves coverimage" class="img-responsive">
+              <img src="images/blog/Try.png" alt="amazing caves coverimage" class="img-responsive">
+            </div>
+						<div class="content">
+					 							<h3><a href="blog-single.html">ERGONOMIC HOME WORK SETUPS</a></h3>
+					               <p> Change is the only constant. With major companies looking at 'work from home' as a permanent option, here is a glimpse on what it will look like.</p>
+					               <a class="btn btn-transparent" href="blog-single.html">Read more</a>
+					             </div>
+          </div>
+        </article>
+        <!-- /single blog post -->
+
+        <!-- single blog post -->
+        <article class="col-md-4 col-sm-6 col-xs-12 mb-30 wow fadeInUp" data-wow-duration="500ms"
+          data-wow-delay="200ms">
+          <div class="post-block">
+            <div id="gallery-post" class="media-wrapper">
+              <div class="item">
+                <img src="images/blog/blog-2.png" alt="blog post" class="img-responsive">
+              </div>
+            </div>
+
+						<div class="content">
+													<h3><a href="blog-two.html">“THE CITY THAT NEVER SLEEPS”- HOW TRUE IS IT?</a></h3>
+													<p>They say that sometimes it takes a whole tank of fuel until you can think straight. And that would be one phrase I can sum up my passion for riding a bike to. Here's my experience!</p>
+													<a class="btn btn-transparent" href="blog-two.html">Read more</a>
+						            </div>
+          </div>
+        </article>
+        <!-- end single blog post -->
+
+        <!-- single blog post -->
+        <article class="col-md-4 col-sm-6 col-xs-12 mb-30 wow fadeInUp" data-wow-duration="500ms"
+          data-wow-delay="400ms">
+          <div class="post-block">
+            <div class="media-wrapper">
+              <img src="images/blog/blog-3.png" alt="amazing caves coverimage" class="img-responsive">
+            </div>
+
+						<div class="content">
+													<h3><a href="blog-three.html">KIT-KAT IN JAPAN</a></h3>
+													<p>Kit Kat is more than just another chocolate in Japan. People don’t just buy it to snack on but do so because it’s for good luck! Read on to know how Nestle swept the Japanese market by feet. Oh and all of that, unintentionally. </p>
+													<a class="btn btn-transparent" href="blog-three.html">Read more</a>
+						            </div>
+          </div>
+        </article>
+        <!-- end single blog post -->
+        <!-- single blog post -->
+        <article class="col-md-4 col-sm-6 col-xs-12 mb-30 clearfix wow fadeInUp" data-wow-duration="500ms">
+          <div class="post-block">
+            <div class="media-wrapper">
+              <img src="images/blog/blog-4.png" alt="amazing caves coverimage" class="img-responsive">
             </div>
             <div class="content">
-              <h3><a href="blog-single.html">Ergonomic Home-Work</a></h3>
-              <p> Change is the only constant. With major companies looking at 'work from home' as a permanent option, here is a glimpse on what it will look like.</p>
-              <a class="btn btn-transparent" href="blog-single.html">Read more</a>
+              <h3><a href="blog-four.html">THE IMPACT OF “GULAG ARCHIPELAGO”</a></h3>
+              <p>In a world flooding with drastic revolutions and larger than life discoveries, it is important to recognise the impact of Literature on masses</p>
+              <a class="btn btn-transparent" href="blog-four.html">Read more</a>
             </div>
           </div>
         </article>
         <!-- /single blog post -->
 
-				<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
-					<div class="post-block">
-						<div id="gallery-post" class="media-wrapper">
-							<div class="item">
-								<img src="images/blog/blog-2.png" alt="blog post | Meghna" class="img-responsive">
-							</div>
-						</div>
+        <!-- single blog post -->
+        <article class="col-md-4 col-sm-6 col-xs-12 mb-30 wow fadeInUp" data-wow-duration="500ms"
+          data-wow-delay="200ms">
+          <div class="post-block">
+            <div class="media-wrapper">
+              <img src="images/blog/blog-post-5.jpg" alt="amazing caves coverimage" class="img-responsive">
+            </div>
 
-						<div class="content">
-							<h3><a href="blog-two.html">“The City That Never Sleeps”- How True Is It?</a></h3>
-							<p>They say that sometimes it takes a whole tank of fuel until you can think straight. And that would be one phrase I can sum up my passion for riding a bike to. Here's my experience!</p>
-							<a class="btn btn-transparent" href="blog-two.html">Read more</a>
-						</div>
-					</div>
-				</article>
-				<!-- single blog post -->
-				<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="400ms">
-					<div class="post-block">
-						<div class="media-wrapper">
-							<img src="images/blog/blog-3.png" alt="amazing caves coverimage" class="img-responsive">
-						</div>
+            <div class="content">
+              <h3><a href="">Simple Slider Post</a></h3>
+              <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                squid. 3 wolf moon officia aute, non skateboard dolor brunch.</p>
+              <a class="btn btn-transparent" href="blog-single.html">Read more</a>
+            </div>
+          </div>
+        </article>
+        <!-- end single blog post -->
 
-						<div class="content">
-							<h3><a href="blog-three.html">KIT-KAT IN JAPAN</a></h3>
-							<p>Kit Kat is more than just another chocolate in Japan. People don’t just buy it to snack on but do so because it’s for good luck! Read on to know how Nestle swept the Japanese market by feet. Oh and all of that, unintentionally. </p>
-							<a class="btn btn-transparent" href="blog-three.html">Read more</a>
-						</div>
-					</div>
-				</article>
-      <!-- <nav aria-label="Page navigation" class="text-center">
+        <!-- single blog post -->
+        <article class="col-md-4 col-sm-6 col-xs-12 mb-30 wow fadeInUp" data-wow-duration="500ms"
+          data-wow-delay="400ms">
+          <div class="post-block">
+            <div class="media-wrapper">
+              <img src="images/blog/blog-post-6.jpg" alt="amazing caves coverimage" class="img-responsive">
+            </div>
+
+            <div class="content">
+              <h3><a href="">Simple Image Post</a></h3>
+              <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                squid. 3 wolf moon officia aute, non skateboard dolor brunch.</p>
+              <a class="btn btn-transparent" href="blog-single.html">Read more</a>
+            </div>
+          </div>
+        </article>
+        <!-- end single blog post -->
+      </div>
+  <!--    <nav aria-label="Page navigation" class="text-center">
         <ul class="pagination pagination-lg">
           <li>
             <a href="#" aria-label="Previous">
@@ -184,52 +241,51 @@ End Fixed Navigation
 <!-- end Contact Area
 		========================================== -->
 
-<footer id="footer" class="bg-one">
-	<div class="container">
-		<div class="row wow fadeInUp" data-wow-duration="500ms">
-			<div class="col-lg-12">
+		<!-- Srart Contact Us
+	=========================================== -->
+		<section id="contact-us" class="contact-us section-bg" style="padding-top:2%;">
+			<div class="container">
+				<div class="row">
 
-				<!-- Footer Social Links -->
-				<div class="social-icon">
-					<ul class="list-inline">
-						<li><a href="https://facebook.com/themefisher"><i class="tf-ion-social-facebook"></i></a></li>
-						<li><a href="https://twitter.com/themefisher"><i class="tf-ion-social-twitter"></i></a></li>
-						<li><a href="https://www.youtube.com/channel/UCx9qVW8VF0LmTi4OF2F8YdA"><i class="tf-ion-social-youtube"></i></a></li>
-						<li><a href="https://dribbble.com/themefisher"><i class="tf-ion-social-dribbble-outline"></i></a></li>
-						<li><a href="https://pinterest.com/themefisher"><i class="tf-ion-social-pinterest-outline"></i></a></li>
-					</ul>
+					<!-- section title -->
+					<!-- <div class="title text-center wow fadeIn" style="padding-bottom:2%;" data-wow-duration="500ms">
+						<h2>Get In <span class="color">Touch</span></h2>
+						<div class="border"></div>
+					</div> -->
+					<!-- /section title -->
+				</div> <!-- end row -->
+				<div class="row text-center">
+					<!-- Contact Details -->
+					<div class="contact-info col-md wow fadeInUp" data-wow-duration="500ms">
+						<h4 style="padding:0.5%; margin:0; color:black;"> <span style="color:#e54029;">Write to us at :</span> vbit.stutalk@gmail.com</h4>
+						<!-- <div class="contact-details">
+							<div>
+								<i class="col tf-map-pin"></i>
+								<span class="col" >Vignana Bharathi Institute of Technology, Aushapur, Ghatkesar, Hyderabad, Telangana.</span>
+							</div>
+							<div>
+								<i class="col tf-ion-ios-telephone-outline"></i>
+								<span class="col" >Phone : +91 7330605714</span>
+							</div>
+							<div>
+								<span class="col">Write to us at : vbit.stutalk@gmail.com</span>
+							</div>
+						</div> -->
+					</div>
+					<!-- / End Contact Details -->
 				</div>
-				<!--/. End Footer Social Links -->
-
-				<!-- copyright -->
-				<div class="copyright text-center">
-					<a href="index.html">
-						<!-- <img src="images/logo-meghna.png" alt="Meghna" />  -->
-						<svg width="40px" height="40px" viewBox="0 0 45 44" version="1.1"
-							xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-							<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-								<g id="Group" transform="translate(2.000000, 2.000000)" stroke="#57CBCC"
-									stroke-width="3">
-									<ellipse id="Oval" cx="20.5" cy="20" rx="20.5" ry="20"></ellipse>
-									<path d="M6,7 L33.5,34.5" id="Line-2" stroke-linecap="square"></path>
-									<path d="M21,20 L34,7" id="Line-3" stroke-linecap="square"></path>
-								</g>
-							</g>
-						</svg>
-					</a>
-					<br />
-
-					<p>Design And Developed by <a href="http://www.themefisher.com">Themefisher.com</a>. Copyright
-						&copy; <script>
-							document.write(new Date().getFullYear())
-						</script>. All Rights Reserved.</p>
+				<div class="row">
+					<div class="social-icon" style="padding:0;">
+						<ul class="list-inline">
+							<li><a href="https://www.instagram.com/vbit.stutalk/"><i class="tf-ion-social-instagram-outline"></i></a></li>
+							<li><a href="https://www.youtube.com/channel/UCqsr0kgZjZnxQPV9i8UcX1A"><i class="tf-ion-social-youtube"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/stutalk-vbit/"><i class="tf-ion-social-linkedin"></i></a></li>
+						</ul>
+					</div>
 				</div>
-				<!-- /copyright -->
+			</div> <!-- end container -->
 
-			</div> <!-- end col lg 12 -->
-		</div> <!-- end row -->
-	</div> <!-- end container -->
-</footer> <!-- end footer -->
+	</section> <!-- end section -->
 
 		<!--
 		Essential Scripts
