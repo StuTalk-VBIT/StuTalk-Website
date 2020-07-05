@@ -37,7 +37,7 @@
 	<link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
 	<!-- Main Stylesheet -->
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/customStyle.css">
+	<link rel="stylesheet" href="css/customStyleAbout.css">
 	<link rel="stylesheet" href="css/scrollAnimation.css">
 
 </head>
@@ -88,13 +88,13 @@
 			<!-- main nav -->
 			<nav class="collapse navbar-collapse navbar-right" role="Navigation">
 				<ul id="nav" class="nav navbar-nav navigation-menu">
-                <li><a data-scroll href="#body">Home</a></li>
-                <li><a data-scroll href="#about-us">About Us</a></li>
-                <li><a data-scroll href="#magazines">Magazines</a></li>
-                <li><a data-scroll href="#portfolio">Brodcast Journalism</a></li>
+                <li><a data-scroll href="./index.html">Home</a></li>
+                <li><a data-scroll href="#about-us" class="active-page">About Us</a></li>
+                <li><a data-scroll href="./index.html#magazines">Magazines</a></li>
+                <li><a data-scroll href="#portfolio">Broadcast Journalism</a></li>
                 <li><a data-scroll href="#Saadhya">Saadhya</a></li>
-                <li><a data-scroll href="#our-team">Team</a></li>
-                <li><a data-scroll href="#blog">Blog</a></li>
+                <li><a data-scroll href="#our-faculty">Team</a></li>
+                <li><a data-scroll href="./blog.html">Blog</a></li>
                 <li><a data-scroll href="#contact-us">Contact</a></li>
             </ul>
 			</nav>
@@ -108,81 +108,89 @@
 	<!--
 		Start About Section
 		==================================== -->
-	<section id="about-us" class=" about section testimonial overly section bg-2">
-		<div class="container">
-			<div class="row">
-
-				<!-- section title -->
-				<div class="title text-center wow fadeIn" data-wow-duration="1500ms">
-					<h2>About <span class="color">Us</span> </h2>
-					<div class="border"></div>
-				</div>
 				<!-- /section title -->
-
-				<!-- About item -->
-				<div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms">
-					<div class="block">
-						<div class="icon-box">
-							<i class="tf-tools"></i>
-						</div>
-						<!-- Express About Yourself -->
-						<div class="content text-center">
-							<h3 class="ddd">We're Creative</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos</p>
-						</div>
-					</div>
-				</div>
-				<!-- End About item -->
-
-				<!-- About item -->
-				<div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="250ms">
-					<div class="block">
-						<div class="icon-box">
-							<i class="tf-strategy"></i>
-						</div>
-						<!-- Express About Yourself -->
-						<div class="content text-center">
-							<h3>We're Professional</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos</p>
-						</div>
-					</div>
-				</div>
-				<!-- End About item -->
-
-				<!-- About item -->
-				<div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="500ms">
-					<div class="block kill-margin-bottom">
-						<div class="icon-box">
-							<i class="tf-anchor2"></i>
-						</div>
-						<!-- Express About Yourself -->
-						<div class="content text-center">
-							<h3>We're Genius</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos</p>
+				<section class="section about-2 padding-0 bg-dark" id="about">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-6 padding-0 ">
+								<img class="img-responsive" src="images/about/about-business-man.jpg" alt="">
+							</div>
+							<div class="col-md-6">
+								<div class="content-block">
+									<h2>The Official Campus Newsletter.</h2>
+									<p>StuTalk is a student- run forum that serves as the official campus magazine of VBIT, since 2007. We design and release two editons comprising a Volume in an academic year namely: The Freshmen Edition and The Republic Edition. <br />
+										<br />StuTalk has been the event galore of VBIT, recording and publishing the academic events, noteworthy achievements and accolades of students and the College.  </p>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="media">
+												<div class="pull-left">
+													<i class="tf-circle-compass"></i>
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading"><a data-scroll href="#Broadcast-Journalism">Broadcast Journalism</a></h4>
+													<p> The latest extension of our forum aims to engage students with insightful and entertaining videos.</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="media">
+												<div class="pull-left">
+													<i class="tf-hotairballoon"></i>
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading"><a data-scroll href="#Saadhya">Saadhya</a></h4>
+													<p>The Flagship event holds competitions that invoke to invoke a sense of diplomacy and creativity. </p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-				<!-- End About item -->
+				</section>
+				<!-- About item -->
+				<section id="counter" class="parallax-section bg-1 section overly">
+					<div class="container">
+						<div class="row text-center">
 
-			</div> <!-- End row -->
-			<div class="row text-center">
-				<a class="btn btn-main" href="about-us.html" tabindex="0">Know more</a>
-			</div>
-		</div> <!-- End container -->
-	</section> <!-- End section -->
+							<!-- first count item -->
+							<div class="col-12 text-center wow fadeInDown" data-wow-duration="500ms">
+								<div class="counters-item">
+									<i class="tf-ion-android-happy"></i>
+									<span>14</span>
+									<h3>VOLUMES</h3>
+								</div>
+							</div>
+							<!-- end first count item -->
+
+							<!-- third count item -->
+							<div class="col-12 text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="400ms">
+								<div class="counters-item">
+									<i class="tf-ion-thumbsup"></i>
+									<span>39</span>
+									<h3>ISSUES</h3>
+
+								</div>
+							</div>
+							<!-- end third count item -->
+
+
+						</div> <!-- end row -->
+					</div> <!-- end container -->
+				</section> <!-- end section -->
 <!-- Our Portfolio -->
 
-	<section id="Our-Portfolios" class="bg-one about section">
+	<section id="Our-Portfolios" class=" about section portfolio-bg">
 		<div class="container">
 			<div class="row">
 
 				<!-- section title -->
 				<div class="title text-center wow fadeIn" data-wow-duration="1500ms">
-					<h2>Our<span class="color">Portfolios</span> </h2>
+					<h2>Our <span class="color">Portfolios</span> </h2>
 					<div class="border"></div>
 				</div>
 				<!-- /section title -->
-
 				<!-- About item -->
 				<div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms">
 					<div class="block">
@@ -191,7 +199,7 @@
 						</div>
 						<!-- Express About Yourself -->
 						<div class="content text-center">
-							<h3 class="ddd">We're Creative</h3>
+							<h3 class="ddd" style="color: #e54029;">We're Creative</h3>
 							<p>Our Copy Editors are the creative part of this well oiled machine. If you possess the skill of eloquently stitching words together, this might be the post you are looking for!</p>
 						</div> <!-- End row -->
 						<div class="row text-center">
@@ -208,7 +216,7 @@
 						</div>
 						<!-- Express About Yourself -->
 						<div class="content text-center">
-							<h3>We're Artistic</h3>
+							<h3 style="color: #e54029;">We're Artistic</h3>
 							<p>When it comes to the looks, our artistic designers have got it all! Their stellar designs truly set us apart. Under this portfolio you can share your imaginative side with the whole campus</p>
 						</div>
 						<div class="row text-center">
@@ -225,7 +233,7 @@
 						</div>
 						<!-- Express About Yourself -->
 						<div class="content text-center">
-							<h3>We're Fun</h3>
+							<h3 style="color: #e54029;">We're Fun</h3>
 							<p>Our amazing team members produce the best entertainment. We offer roles in photography and videography to produce content for our official YouTube Channel, for the world to see.</p>
 						</div>
 						<div class="row text-center">
@@ -237,11 +245,6 @@
 			</div> <!-- End row -->
 		</div> <!-- End container -->
 	</section> <!-- End section -->
-<!--
-Start Saadhya -->
-<section id="Saadhya">
-
-</section>
 	<!--
 Start Our Team
 =========================================== -->
@@ -554,27 +557,56 @@ Start Our Team
 			</div>
 		</div> <!-- End container -->
 	</section> <!-- End section -->
+<!--	Start Saadhya -->
+	<section id="Saadhya">
 
-	<footer id="footer" class="bg-one">
+	</section>
+
+	<!-- Srart Contact Us
+=========================================== -->
+	<section id="contact-us" class="contact-us section-bg" style="padding-top:2%;">
 		<div class="container">
-			<div class="row wow fadeInUp" data-wow-duration="500ms">
-				<div class="col-lg-12">
+			<div class="row">
 
-					<!-- Footer Social Links -->
-					<div class="social-icon">
-						<ul class="list-inline">
-							<li><a href="https://facebook.com/themefisher"><i class="tf-ion-social-facebook"></i></a></li>
-							<li><a href="https://twitter.com/themefisher"><i class="tf-ion-social-twitter"></i></a></li>
-							<li><a href="https://www.youtube.com/channel/UCx9qVW8VF0LmTi4OF2F8YdA"><i class="tf-ion-social-youtube"></i></a></li>
-							<li><a href="https://dribbble.com/themefisher"><i class="tf-ion-social-dribbble-outline"></i></a></li>
-							<li><a href="https://pinterest.com/themefisher"><i class="tf-ion-social-pinterest-outline"></i></a></li>
-						</ul>
-					</div>
-					<!--/. End Footer Social Links -->
-				</div> <!-- end col lg 12 -->
+				<!-- section title -->
+				<!-- <div class="title text-center wow fadeIn" style="padding-bottom:2%;" data-wow-duration="500ms">
+					<h2>Get In <span class="color">Touch</span></h2>
+					<div class="border"></div>
+				</div> -->
+				<!-- /section title -->
 			</div> <!-- end row -->
+			<div class="row text-center">
+				<!-- Contact Details -->
+				<div class="contact-info col-md wow fadeInUp" data-wow-duration="500ms">
+					<h4 style="padding:0.5%; margin:0; color:black;"> <span style="color:#e54029;">Write to us at :</span> vbit.stutalk@gmail.com</h4>
+					<!-- <div class="contact-details">
+						<div>
+							<i class="col tf-map-pin"></i>
+							<span class="col" >Vignana Bharathi Institute of Technology, Aushapur, Ghatkesar, Hyderabad, Telangana.</span>
+						</div>
+						<div>
+							<i class="col tf-ion-ios-telephone-outline"></i>
+							<span class="col" >Phone : +91 7330605714</span>
+						</div>
+						<div>
+							<span class="col">Write to us at : vbit.stutalk@gmail.com</span>
+						</div>
+					</div> -->
+				</div>
+				<!-- / End Contact Details -->
+			</div>
+			<div class="row">
+				<div class="social-icon" style="padding:0;">
+					<ul class="list-inline">
+						<li><a href="https://www.instagram.com/vbit.stutalk/"><i class="tf-ion-social-instagram-outline"></i></a></li>
+						<li><a href="https://www.youtube.com/channel/UCqsr0kgZjZnxQPV9i8UcX1A"><i class="tf-ion-social-youtube"></i></a></li>
+						<li><a href="https://www.linkedin.com/company/stutalk-vbit/"><i class="tf-ion-social-linkedin"></i></a></li>
+					</ul>
+				</div>
+			</div>
 		</div> <!-- end container -->
-	</footer> <!-- end footer -->
+
+</section> <!-- end section -->
 
 
 

@@ -9,6 +9,11 @@ Tags: one-page, single-page, portfolio, custom-colors, post-formats, responsive,
 /*=== MEDIA QUERY ===*/
 @import url("https://fonts.googleapis.com/css?family=Anaheim|Quattrocento+Sans:400,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,600");
+.active-page{
+  background-color:#e54029;
+   border-radius:15px;
+    margin-top:3.7%;
+}
 html {
   background-color: #fefefe;
   color: #ea5a12;
@@ -1991,7 +1996,7 @@ aside.widget {
 }
 
 blockquote {
-  border-left: 5px solid #6cb670;
+  border-left: 5px solid #000000;
   font-style: italic;
   line-height: 22px;
   margin: 20px 0;
@@ -2110,5 +2115,6 @@ blockquote {
 .form-group:last-child input {
   margin: 0;
 }
+
 
 /*# sourceMappingURL=maps/style.css.map */
