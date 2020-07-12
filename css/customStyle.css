@@ -17,6 +17,10 @@
   .magazine-block {
     padding: 15% !important;
     width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .img-blog {
+    width: 80% !important;
   }
 }
 @media only screen and (max-device-width: 576px) {
@@ -98,9 +102,13 @@
 }
 .magazine-block {
   padding: 3%;
+  margin-left: 2.7%;
   width: 30%;
 }
 .magazine-block:hover img {
   box-shadow: 2px 5px 15px black;
   transform: translate(-5px, -10px);
+}
+#broadcast .block {
+  z-index: 1;
 }

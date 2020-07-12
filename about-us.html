@@ -66,7 +66,7 @@
 	<!--
   Fixed Navigation
   ==================================== -->
-	<header id="navigation" class="navbar navigation">
+	<header id="navigation" class="navbar navigation custom-navbar">
 		<div class="container">
 			<div class="navbar-header">
 				<!-- responsive nav button -->
@@ -89,15 +89,22 @@
 			<!-- main nav -->
 			<nav class="collapse navbar-collapse navbar-right" role="Navigation">
 				<ul id="nav" class="nav navbar-nav navigation-menu">
-					<li><a data-scroll href="./index.html">Home</a></li>
-					<li><a data-scroll class="active-page">About Us</a></li>
-					<li><a data-scroll href="./index.html#magazines">Magazines</a></li>
-					<li><a data-scroll href="#portfolio">Broadcast Journalism</a></li>
-					<li><a data-scroll href="#Saadhya">Saadhya</a></li>
-					<li><a data-scroll href="#our-faculty">Team</a></li>
-					<li><a data-scroll href="./blog.html">Blog</a></li>
-					<li><a data-scroll href="#contact-us">Contact</a></li>
-				</ul>
+                <li><a data-scroll href="./index.html">Home</a></li>
+								<li><a data-scroll href="./about-us.html" style="color:white !important;" class="active-page">About Us</a></li>
+								<li><a data-scroll href="./index.html#magazines">Magazines</a></li>
+								<li><a data-scroll href="./index.html#broadcast">Broadcast Journalism</a></li>
+								<li><a data-scroll href="./about-us.html#saadhya">Saadhya</a></li>
+								<li class="dropdown">
+					        <a class="dropdown-toggle" data-toggle="dropdown" style="background-color:#1d2024;">Team
+					        <span class="caret"></span></a>
+					        <ul class="dropdown-menu" style="background-color:black;">
+					          <li><a href="./about-us.html#our-faculty">Our Team</a></li>
+					          <li><a href="./alumni.html">ALumni</a></li>
+					        </ul>
+					      </li>
+								<li><a data-scroll href="./index.html#blog">Blogs</a></li>
+								<li><a data-scroll href="#contact-us">Contact</a></li>
+            </ul>
 			</nav>
 			<!-- /main nav -->
 
@@ -139,7 +146,7 @@
 										<i class="fas fa-flag"></i>
 									</div>
 									<div class="media-body">
-										<h4 class="media-heading" style="text-decoration:underline;"><a data-scroll href="#Saadhya">Saadhya</a></h4>
+										<h4 class="media-heading" style="text-decoration:underline;"><a data-scroll href="#saadhya">Saadhya</a></h4>
 										<p>The Flagship event holds competitions that invoke to invoke a sense of diplomacy and creativity. </p>
 									</div>
 								</div>
@@ -622,14 +629,12 @@ Start Our Team
 						</div>
 					</div>
 				</div>
-				<div class="row text-center">
-					<a class="btn btn-main" href="alumni.html" tabindex="0" style="margin-top:5%;">Alumni</a>
-				</div>
+			</div>
 			</div>
 		</div> <!-- End container -->
 	</section> <!-- End section -->
 	<!--	Start Saadhya -->
-	<section id="team-skills" class="parallax-section section saadhya-bg overly">
+	<section id="saadhya" class="parallax-section section saadhya-bg overly">
 		<div class="container">
 			<div class="row">
 				<!-- section title -->
@@ -649,7 +654,6 @@ Start Our Team
 			</div>
 		</div> <!-- End container -->
 	</section> <!-- End section -->
-	</section>
 	<section id="Gallery">
 		<div class="title text-center wow fadeInUp" data-wow-duration="500ms">
 			<h2><span class="color">GALLERY</span></h2>
@@ -658,23 +662,23 @@ Start Our Team
 		<div class="fixed-bar">
 			<!-- Elastislide Carousel -->
 			<ul id="carousel" class="elastislide-list">
-				<li><a href="images/large/1.jpg"><img src="images/small/1.png" alt="image01" /></a></li>
-				<li><a href="images/large/2.JPG"><img src="images/small/2.png" alt="image02" /></a></li>
-				<li><a href="images/large/3.JPG"><img src="images/small/3.png" alt="image03" /></a></li>
-				<li><a href="images/large/4.JPG"><img src="images/small/4.png" alt="image04" /></a></li>
-				<li><a href="images/large/5.JPG"><img src="images/small/5.png" alt="image05" /></a></li>
-				<li><a href="images/large/6.jpg"><img src="images/small/6.png" alt="image06" /></a></li>
-				<li><a href="images/large/7.jpg"><img src="images/small/7.png" alt="image07" /></a></li>
-				<li><a href="images/large/8.jpg"><img src="images/small/8.png" alt="image08" /></a></li>
-				<li><a href="images/large/9.jpg"><img src="images/small/9.png" alt="image09" /></a></li>
-				<li><a href="images/large/10.jpg"><img src="images/small/10.png" alt="image10" /></a></li>
-				<li><a href="images/large/11.jpg"><img src="images/small/11.png" alt="image11" /></a></li>
-				<li><a href="images/large/12.jpg"><img src="images/small/12.png" alt="image12" /></a></li>
+				<li><a href="./images/large/1.jpg"><img src="./images/small/1.png" alt="image01" /></a></li>
+				<li><a href="./images/large/2.JPG"><img src="./images/small/2.png" alt="image02" /></a></li>
+				<li><a href="./images/large/3.JPG"><img src="./images/small/3.png" alt="image03" /></a></li>
+				<li><a href="./images/large/4.JPG"><img src="./images/small/4.png" alt="image04" /></a></li>
+				<li><a href="./images/large/5.JPG"><img src="./images/small/5.png" alt="image05" /></a></li>
+				<li><a href="./images/large/6.jpg"><img src="./images/small/6.png" alt="image06" /></a></li>
+				<li><a href="./images/large/7.jpg"><img src="./images/small/7.png" alt="image07" /></a></li>
+				<li><a href="./images/large/8.jpg"><img src="./images/small/8.png" alt="image08" /></a></li>
+				<li><a href="./images/large/9.jpg"><img src="./images/small/9.png" alt="image09" /></a></li>
+				<li><a href="./images/large/10.jpg"><img src="./images/small/10.png" alt="image10" /></a></li>
+				<li><a href="./images/large/11.jpg"><img src="./images/small/11.png" alt="image11" /></a></li>
+				<li><a href="./images/large/12.jpg"><img src="./images/small/12.png" alt="image12" /></a></li>
 			</ul>
 			<!-- End Elastislide Carousel -->
 		</div>
 		</div>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<script type="text/javascript" src="js/jquerypp.custom.js"></script>
 		<script type="text/javascript" src="js/jquery.elastislide.js"></script>
 		<script type="text/javascript">

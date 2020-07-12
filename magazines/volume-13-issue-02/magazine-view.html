@@ -16,20 +16,40 @@
     <title>StuTalk</title>
   </head>
   <body>
-    <nav class="navbar navbar-light bg-light">
-      <button type="button" class="btn btn-dark" id="prev">
-        Previous
-      </button>
-      <button type="button" class="btn btn-dark" id="next">Next</button>
-      <span class="page-info"
+    <nav
+      class="navbar navbar-dark bg-* custom-navbar"
+      style="background-color: black;"
+    >
+      <a href="#"
+        ><i
+          class="fas fa-arrow-left"
+          style="color: #e6e6e6; font-size: 120%;"
+          onclick="history.back()"
+        ></i
+      ></a>
+      <a class="navbar-brand" href="../../index.html"
+        ><img src="../../../images/logo.png" width="50" height="50" alt="Home"
+      /></a>
+      <a></a>
+      <span class="page-info" style="color: white;"
         >Page <span id="page_num"></span> of <span id="page_count"></span>
       </span>
     </nav>
+    <button type="button" class="btn btn-dark" id="prev">
+      <i class="fas fa-chevron-left" style="font-size: 120%;"></i>
+    </button>
+    <button type="button" class="btn btn-dark" id="next">
+      <i class="fas fa-chevron-right"></i>
+    </button>
     <div class="container-fluid text-center" id="the-container">
-      <canvas id="the-canvas" class="mt-5"></canvas>
+      <canvas id="the-canvas" class="mt-5" style="font-size: 120%;"></canvas>
     </div>
 
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
     <script src="./magazine-view.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f11816671e.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

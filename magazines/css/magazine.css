@@ -1,12 +1,24 @@
 @media only screen and (max-device-width: 768px) {
-  .navbar-brand {
-    margin-left: -11% !important;
+  #the-canvas {
+    height: 65% !important;
+  }
+  #the-container {
+    padding-top: 25%;
+  }
+  #prev {
+    left: 0 !important;
+    background-color: transparent;
+    border: 0 !important;
+    box-shadow: 0 !important;
+  }
+  #next {
+    right: 0 !important;
+    background-color: transparent;
+    border: 0 !important;
   }
 }
-
 #the-canvas {
-  height: 500px;
-  box-shadow: 10px 15px 10px grey;
+  height: 90%;
   transition: width 2s;
 }
 .latest-magazine {
@@ -22,7 +34,6 @@
 }
 .custom-navbar {
   box-shadow: 0px 1px 25px black;
-  padding-left: 49% !important;
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -36,4 +47,24 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: grey;
+}
+#the-container {
+  background-image: url("../images/magazines-bg.jpg");
+  height: 100vh;
+}
+.page-info {
+  display: none;
+}
+#prev {
+  top: 50%;
+  left: 5%;
+  position: absolute;
+}
+#next {
+  top: 50%;
+  right: 5%;
+  position: absolute;
+}
+.btn {
+  border-radius: 50% !important;
 }

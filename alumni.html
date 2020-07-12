@@ -78,7 +78,7 @@
     <!--
   Fixed Navigation
   ==================================== -->
-    <header id="navigation" class="navbar navigation">
+    <header id="navigation" class="navbar navigation custom-navbar">
       <div class="container">
         <div class="navbar-header">
           <!-- responsive nav button -->
@@ -107,12 +107,29 @@
         <nav class="collapse navbar-collapse navbar-right" role="Navigation">
           <ul id="nav" class="nav navbar-nav navigation-menu">
             <li><a data-scroll href="./index.html">Home</a></li>
-            <li><a data-scroll class="active-page">About Us</a></li>
+            <li>
+              <a data-scroll href="./about-us.html">About Us</a>
+            </li>
             <li><a data-scroll href="./index.html#magazines">Magazines</a></li>
-            <li><a data-scroll href="#portfolio">Broadcast Journalism</a></li>
-            <li><a data-scroll href="#Saadhya">Saadhya</a></li>
-            <li><a data-scroll href="#our-faculty">Team</a></li>
-            <li><a data-scroll href="./blog.html">Blog</a></li>
+            <li>
+              <a data-scroll href="./index.html#broadcast"
+                >Broadcast Journalism</a
+              >
+            </li>
+            <li><a data-scroll href="./about-us.html#saadhya">Saadhya</a></li>
+            <li class="dropdown">
+              <a
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                style="background-color: #1d2024;"
+                >Team <span class="caret"></span
+              ></a>
+              <ul class="dropdown-menu" style="background-color: black;">
+                <li><a href="./about-us.html#our-faculty">Our Team</a></li>
+                <li><a href="./alumni.html">ALumni</a></li>
+              </ul>
+            </li>
+            <li><a data-scroll href="./index.html#blog">Blogs</a></li>
             <li><a data-scroll href="#contact-us">Contact</a></li>
           </ul>
         </nav>
