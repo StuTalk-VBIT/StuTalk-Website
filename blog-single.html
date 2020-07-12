@@ -75,7 +75,7 @@
     <!--
   Fixed Navigation
   ==================================== -->
-    <header id="navigation" class="navbar navigation">
+    <header id="navigation" class="navbar navigation custom-navbar">
       <div class="container">
         <div class="navbar-header">
           <!-- responsive nav button -->
@@ -100,15 +100,42 @@
           <!-- /logo -->
         </div>
 
+        <!-- main nav -->
         <nav class="collapse navbar-collapse navbar-right" role="Navigation">
           <ul id="nav" class="nav navbar-nav navigation-menu">
-            <li><a data-scroll href="#body">Home</a></li>
-            <li><a data-scroll href="#about">About Us</a></li>
-            <li><a data-scroll href="#magazines">Magazines</a></li>
-            <li><a data-scroll href="#portfolio">Brodcast Journalism</a></li>
-            <li><a data-scroll href="#our-team">Saadhya</a></li>
-            <li><a data-scroll href="#pricing">Team</a></li>
-            <li><a data-scroll href="#blog">Blog</a></li>
+            <li>
+              <a
+                data-scroll
+                href="./index.html"
+                style="color: white !important;"
+                >Home</a
+              >
+            </li>
+            <li><a data-scroll href="./about-us.html">About Us</a></li>
+            <li><a data-scroll href="./index.html#magazines">Magazines</a></li>
+            <li>
+              <a data-scroll href="./index.html#broadcast"
+                >Broadcast Journalism</a
+              >
+            </li>
+            <li><a data-scroll href="./about-us.html#saadhya">Saadhya</a></li>
+            <li class="dropdown">
+              <a
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                style="background-color: #1d2024;"
+                >Team <span class="caret"></span
+              ></a>
+              <ul class="dropdown-menu" style="background-color: black;">
+                <li><a href="./about-us.html#our-faculty">Our Team</a></li>
+                <li><a href="./alumni.html">Alumni</a></li>
+              </ul>
+            </li>
+            <li>
+              <a data-scroll href="./index.html#blog" class="active-page"
+                >Blogs</a
+              >
+            </li>
             <li><a data-scroll href="#contact-us">Contact</a></li>
           </ul>
         </nav>
@@ -208,9 +235,9 @@
         <div class="row">
           <!-- section title -->
           <!-- <div class="title text-center wow fadeIn" style="padding-bottom:2%;" data-wow-duration="500ms">
-						<h2>Get In <span class="color">Touch</span></h2>
-						<div class="border"></div>
-					</div> -->
+					<h2>Get In <span class="color">Touch</span></h2>
+					<div class="border"></div>
+				</div> -->
           <!-- /section title -->
         </div>
         <!-- end row -->
@@ -222,21 +249,25 @@
           >
             <h4 style="padding: 0.5%; margin: 0; color: black;">
               <span style="color: #e54029;">Write to us at :</span>
-              vbit.stutalk@gmail.com
+              <a
+                href="mailto:vbit.stutalk@gmail.com"
+                style="text-decoration: underline;"
+                >vbit.stutalk@gmail.com</a
+              >
             </h4>
             <!-- <div class="contact-details">
-							<div>
-								<i class="col tf-map-pin"></i>
-								<span class="col" >Vignana Bharathi Institute of Technology, Aushapur, Ghatkesar, Hyderabad, Telangana.</span>
-							</div>
-							<div>
-								<i class="col tf-ion-ios-telephone-outline"></i>
-								<span class="col" >Phone : +91 7330605714</span>
-							</div>
-							<div>
-								<span class="col">Write to us at : vbit.stutalk@gmail.com</span>
-							</div>
-						</div> -->
+						<div>
+							<i class="col tf-map-pin"></i>
+							<span class="col" >Vignana Bharathi Institute of Technology, Aushapur, Ghatkesar, Hyderabad, Telangana.</span>
+						</div>
+						<div>
+							<i class="col tf-ion-ios-telephone-outline"></i>
+							<span class="col" >Phone : +91 7330605714</span>
+						</div>
+						<div>
+							<span class="col">Write to us at : vbit.stutalk@gmail.com</span>
+						</div>
+					</div> -->
           </div>
           <!-- / End Contact Details -->
         </div>
@@ -265,6 +296,7 @@
       </div>
       <!-- end container -->
     </section>
+    <!-- end section -->
     <!-- end section -->
 
     <!--
