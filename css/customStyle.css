@@ -19,6 +19,9 @@
     width: 100% !important;
     margin-left: 0 !important;
   }
+  .img-blog {
+    width: 80% !important;
+  }
 }
 @media only screen and (max-device-width: 576px) {
   .faculty {
@@ -105,4 +108,7 @@
 .magazine-block:hover img {
   box-shadow: 2px 5px 15px black;
   transform: translate(-5px, -10px);
+}
+#broadcast .block {
+  z-index: 1;
 }
