@@ -76,7 +76,9 @@ Welcome Slider
 			<div class="container" id="anim-mobile"></div>
     </div></a>
 
-		<a href="#upcoming-events"><div class="scroll-down"></div></a>
+		<div class="arrow bounce" style="margin:0;" href="#upcoming-events">
+		  <a class="fas fa-chevron-down" href="#upcoming-events" style="font-size:250%; color:#e5e5e5;"></a>
+		</div>
 		</div>
 	</section>
 
@@ -106,12 +108,21 @@ Welcome Slider
 			<!-- main nav -->
 			<nav class="collapse navbar-collapse navbar-right" role="Navigation">
 				<ul id="nav" class="nav navbar-nav navigation-menu">
-                <li><a data-scroll href="#body" style="color:white !important;" class="active-page">Home</a></li>
-								<li><a data-scroll href="#upcoming-events">Upcoming Events</a></li>
-								<li><a data-scroll href="#blog">Blogs</a></li>
-								<li><a data-scroll href="#portfolio">Broadcast Journalism</a></li>
-								<li><a data-scroll href="#magazines">Magazines</a></li>
+                <li><a data-scroll href="./index.html" style="color:white !important;" class="active-page">Home</a></li>
 								<li><a data-scroll href="./about-us.html">About Us</a></li>
+								<li><a data-scroll href="#magazines">Magazines</a></li>
+								<li><a data-scroll href="#broadcast">Broadcast Journalism</a></li>
+								<li><a data-scroll href="./about-us.html#saadhya">Saadhya</a></li>
+								<li class="dropdown">
+					        <a class="dropdown-toggle" data-toggle="dropdown" style="background-color:#1d2024;">Team
+					        <span class="caret"></span></a>
+					        <ul class="dropdown-menu" style="background-color:black;">
+					          <li><a href="./about-us.html#our-faculty">Our Team</a></li>
+					          <li><a href="./alumni.html">ALumni</a></li>
+					        </ul>
+					      </li>
+								<li><a data-scroll href="#blog">Blogs</a></li>
+								<li><a data-scroll href="#contact-us">Contact</a></li>
             </ul>
 			</nav>
 			<!-- /main nav -->
@@ -319,9 +330,6 @@ Welcome Slider
 		</div> <!-- end container -->
 	</section> <!-- end section -->
 
-	<!-- Start Portfolio Section
-		=========================================== -->
-
 	<section class="section magazines-bg" id="magazines">
 		<div class="container">
 			<div class="row ">
@@ -334,15 +342,15 @@ Welcome Slider
 					<!-- /section title -->
 				</div> <!-- /end col-lg-12 -->
 			</div> <!-- end row -->
-			<div class="row">
-				<div class="magazine-block col-lg-4">
-						<img class="img-responsive" src="images/magazines/volume-13-issue-02.png" alt="">
+			<div class="row text-center">
+				<div class="magazine-block col-lg-3 text-center">
+					<a href="./magazines/latest-edition/magazine.html"><img class="img-responsive" src="images/magazines/volume-13-issue-02.png" alt=""></a>
 				</div>
-				<div class="magazine-block col-lg-4">
-						<img class="img-responsive" src="images/magazines/volume-13-issue-02.png" alt="">
+				<div class="magazine-block col-lg-3 text-center">
+						<a href="./magazines/volume-13-issue-02/magazine-view.html"><img class="img-responsive" src="images/magazines/volume-13-issue-02.png" alt="volume-13-issue-02"></a>
 				</div>
-				<div class="magazine-block col-lg-4">
-						<img class="img-responsive" src="images/magazines/volume-13-issue-02.png" alt="">
+				<div class="magazine-block col-lg-3 text-center">
+						<a href="./magazines/volume-13-issue-01/magazine-view.html"><img class="img-responsive" src="images/magazines/volume-13-issue-01.png" alt="volume-13-issue-01"></a>
 				</div>
 			</div>
 		</div> <!-- end container -->
@@ -456,6 +464,10 @@ Welcome Slider
 	<script src="./Assets/animations/lottie.js"></script>
 	<script src="./Assets/animations/intro.js"></script>
 	<script src="./Assets/animations/intro-mobile.js"></script>
+	<script
+		src="https://kit.fontawesome.com/f11816671e.js"
+		crossorigin="anonymous"
+	></script>
 
 </body>
 

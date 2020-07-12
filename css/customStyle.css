@@ -17,6 +17,7 @@
   .magazine-block {
     padding: 15% !important;
     width: 100% !important;
+    margin-left: 0 !important;
   }
 }
 @media only screen and (max-device-width: 576px) {
@@ -98,6 +99,7 @@
 }
 .magazine-block {
   padding: 3%;
+  margin-left: 2.7%;
   width: 30%;
 }
 .magazine-block:hover img {
