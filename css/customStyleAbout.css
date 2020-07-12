@@ -18,15 +18,14 @@
     padding: 15% !important;
     width: 100% !important;
   }
-  #counter .col-12
-  {
-    display:block;
-    width:100% !important;
-     padding:2%;
+  #counter .col-12 {
+    display: block;
+    width: 100% !important;
+    padding: 2%;
   }
-  #Our-Portfolios .icon i{
+  #Our-Portfolios .icon i {
     font-size: 3rem !important;
-    padding-top:0% !important;
+    padding-top: 0% !important;
   }
 }
 @media only screen and (max-device-width: 576px) {
@@ -54,7 +53,8 @@
 .bg-one p {
   color: white;
 }
-#about p, #Our-Portfolios p{
+#about p,
+#Our-Portfolios p {
   color: white;
 }
 .social-icon {
@@ -102,23 +102,27 @@
   background-size: cover;
   background-attachment: fixed;
 }
-.media-heading a:hover
-{
+.bg-3 {
+  background-image: url("../images/backgrounds/bg-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.media-heading a:hover {
   color: white !important;
 }
-#counter .col-12
-{
-  display:inline-block;
-   width:30%;
-   padding:2%;
+#counter .col-12 {
+  display: inline-block;
+  width: 30%;
+  padding: 2%;
 }
-article{
-  height:100vh !important;
+article {
+  height: 100vh !important;
 }
-.blog-img{
+.blog-img {
   padding: 0 37.5% 0 37.5%;
 }
-.saadhya-bg{
+.saadhya-bg {
   background-image: url("../images/backgrounds/saadhya.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -133,7 +137,7 @@ article{
 }
 
 .cardBox:hover .card {
-  transform: rotateY( 180deg);
+  transform: rotateY(180deg);
 }
 
 .card {
@@ -175,7 +179,7 @@ article{
 }
 
 .card .back {
-  transform: rotateY( 180deg);
+  transform: rotateY(180deg);
 }
 
 .card .back a {
@@ -227,19 +231,19 @@ article{
 
 @-webkit-keyframes giro {
   from {
-    transform: rotateY( 180deg);
+    transform: rotateY(180deg);
   }
   to {
-    transform: rotateY( 0deg);
+    transform: rotateY(0deg);
   }
 }
 
 @keyframes giro {
   from {
-    transform: rotateY( 180deg);
+    transform: rotateY(180deg);
   }
   to {
-    transform: rotateY( 0deg);
+    transform: rotateY(0deg);
   }
 }
 
@@ -265,15 +269,15 @@ article{
     height: 260px;
   }
 }
-#Our-Portfolios li{
+#Our-Portfolios li {
   list-style-type: square;
 }
-#Our-Portfolios ul{
+#Our-Portfolios ul {
   padding: 0 25%;
   color: #e5e5e5;
   font-size: 100%;
 }
-#Our-Portfolios .icon i{
+#Our-Portfolios .icon i {
   font-size: 5rem;
-  padding-top:3%
+  padding-top: 3%;
 }
