@@ -1,4 +1,7 @@
 @media only screen and (max-device-width: 768px) {
+  .mobile-hide {
+    display: none;
+  }
   #upcoming-events .img-responsive {
     width: 100%;
   }
@@ -118,4 +121,5 @@
 #upcoming-events .img-responsive {
   margin-bottom: 10%;
   box-shadow: 3px 3px 5px black;
+  border-radius: 10px;
 }
