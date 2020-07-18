@@ -9,10 +9,10 @@ Tags: one-page, single-page, portfolio, custom-colors, post-formats, responsive,
 /*=== MEDIA QUERY ===*/
 @import url("https://fonts.googleapis.com/css?family=Anaheim|Quattrocento+Sans:400,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,600");
-.active-page{
-  background-color:#e54029;
-   border-radius:15px;
-    margin-top:3.7%;
+.active-page {
+  background-color: #e54029;
+  border-radius: 15px;
+  margin-top: 3.7%;
 }
 html {
   background-color: #fefefe;
@@ -337,38 +337,38 @@ a:hover {
   height: 33%;
   background-color: #e54029;
   float: left;
-  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
-  animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+  -webkit-animation: sk-cubeGridScaleDelay 0.65s infinite ease-in-out;
+  animation: sk-cubeGridScaleDelay 0.65s infinite ease-in-out;
 }
 
 .sk-cube-grid .sk-cube1 {
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-}
-
-.sk-cube-grid .sk-cube2 {
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-}
-
-.sk-cube-grid .sk-cube3 {
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-}
-
-.sk-cube-grid .sk-cube4 {
   -webkit-animation-delay: 0.1s;
   animation-delay: 0.1s;
 }
 
-.sk-cube-grid .sk-cube5 {
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.15s;
+  animation-delay: 0.15s;
+}
+
+.sk-cube-grid .sk-cube3 {
   -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
 
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.05s;
+  animation-delay: 0.05s;
+}
+
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
 .sk-cube-grid .sk-cube6 {
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.15s;
+  animation-delay: 0.15s;
 }
 
 .sk-cube-grid .sk-cube7 {
@@ -377,13 +377,13 @@ a:hover {
 }
 
 .sk-cube-grid .sk-cube8 {
-  -webkit-animation-delay: 0.1s;
-  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.05s;
+  animation-delay: 0.05s;
 }
 
 .sk-cube-grid .sk-cube9 {
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 
 @-webkit-keyframes sk-cubeGridScaleDelay {
@@ -2115,6 +2115,5 @@ blockquote {
 .form-group:last-child input {
   margin: 0;
 }
-
 
 /*# sourceMappingURL=maps/style.css.map */

@@ -1,4 +1,7 @@
 @media only screen and (max-device-width: 768px) {
+  .mobile-hide {
+    display: none;
+  }
   #upcoming-events .img-responsive {
     width: 100%;
   }
