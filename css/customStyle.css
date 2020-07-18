@@ -1,4 +1,7 @@
 @media only screen and (max-device-width: 768px) {
+  #upcoming-events .img-responsive {
+    width: 100%;
+  }
   #anim {
     width: 0; /* width of container */
   }
@@ -111,4 +114,8 @@
 }
 #broadcast .block {
   z-index: 1;
+}
+#upcoming-events .img-responsive {
+  margin-bottom: 10%;
+  box-shadow: 3px 3px 5px black;
 }
