@@ -103,10 +103,7 @@
   background-attachment: fixed;
 }
 .bg-3 {
-  background-image: url("../images/backgrounds/bg-3.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: #ffffff;
 }
 .media-heading a:hover {
   color: white !important;
