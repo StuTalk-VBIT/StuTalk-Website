@@ -2,6 +2,10 @@
   .mobile-hide {
     display: none;
   }
+  .down-arrow {
+    width: 7% !important;
+    padding-bottom: 10% !important;
+  }
   #upcoming-events .img-responsive {
     width: 100%;
   }
@@ -10,6 +14,7 @@
   }
   #anim-mobile {
     width: 100% !important;
+    margin-bottom: -10%;
   }
   .faculty {
     padding: 0 25% 0 25% !important;
@@ -30,6 +35,9 @@
   }
 }
 @media only screen and (max-device-width: 576px) {
+  .down-arrow {
+    padding-bottom: 40% !important;
+  }
   .faculty {
     padding: 0 5% 0 5% !important;
   }
@@ -122,4 +130,7 @@
   margin-bottom: 10%;
   box-shadow: 3px 3px 5px black;
   border-radius: 10px;
+}
+.down-arrow {
+  width: 2.5%;
 }
