@@ -27,6 +27,9 @@
     font-size: 3rem !important;
     padding-top: 0% !important;
   }
+  #counter .row {
+    display: flex;
+  }
 }
 @media only screen and (max-device-width: 576px) {
   .faculty {
