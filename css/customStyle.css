@@ -1,4 +1,11 @@
 @media only screen and (max-device-width: 768px) {
+  #myModal {
+    padding: 50% 0% !important;
+  }
+  .modal-content {
+    width: 90% !important;
+    font-size: 70% !important;
+  }
   .form-border {
     margin-top: 12% !important;
   }
