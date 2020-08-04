@@ -100,28 +100,22 @@
         <nav class="collapse navbar-collapse navbar-right" role="Navigation">
           <ul id="nav" class="nav navbar-nav navigation-menu">
             <li><a data-scroll href="./index.html">Home</a></li>
-            <li>
-              <a data-scroll href="./about-us.html">About Us</a>
-            </li>
-            <li><a data-scroll href="./index.html#magazines">Magazines</a></li>
-            <li>
-              <a data-scroll href="index.html#broadcast"
-                >Broadcast Journalism</a
-              >
-            </li>
-            <li><a data-scroll href="Saadhya.html">Saadhya</a></li>
             <li class="dropdown">
               <a
                 class="dropdown-toggle"
                 data-toggle="dropdown"
                 style="background-color: #1d2024;"
-                >Team <span class="caret"></span
+                >About Us <span class="caret"></span
               ></a>
               <ul class="dropdown-menu" style="background-color: black;">
+                <li><a data-scroll href="./about-us.html">Know Us</a></li>
                 <li><a href="./alumni.html#our-faculty">Our Team</a></li>
                 <li><a href="./alumni.html#alumni">Alumni</a></li>
               </ul>
             </li>
+            <li><a data-scroll href="./index.html#magazines">Magazines</a></li>
+            <li><a data-scroll href="./index.html#broadcast">Broadcast Journalism</a></li>
+            <li><a data-scroll href="./Saadhya.html">Saadhya</a></li>
             <li><a data-scroll href="./blog.html">Blogs</a></li>
             <li><a data-scroll href="#contact-us">Contact</a></li>
           </ul>
@@ -183,15 +177,37 @@
           <h4 class="wow fadeInUp" style="color: white; margin-top: 3%;">
             Go on then, click the button below!
           </h4>
-          <button
-            class="btn btn-transparent"
-            onclick="applicationForm()"
-            type="button"
-            name="button"
-            style="color: white; margin-top: 3%;"
-          >
-            Apply now
-          </button>
+          <div class="row">
+            <button
+              class="btn col-md btn-main"
+              onclick="applicationForm()"
+              type="button"
+              name="button"
+              style="
+                color: black;
+                background-color: white;
+                margin-top: 3%;
+                margin-right: 1%;
+              "
+            >
+              Apply now
+            </button>
+            <a href="about-us.html#Our-Portfolios"
+              ><button
+                class="btn col-md btn-main"
+                type="button"
+                name="button"
+                style="
+                  color: black;
+                  background-color: white;
+                  margin-top: 3%;
+                  margin-left: 1%;
+                "
+              >
+                Know Portfolios
+              </button></a
+            >
+          </div>
         </div>
       </div>
       <div id="form" class="wow fadeIn">

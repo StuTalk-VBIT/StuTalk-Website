@@ -281,3 +281,12 @@ article {
   font-size: 5rem;
   padding-top: 3%;
 }
+.cardBox ul {
+  text-align: center !important;
+  padding: 0;
+  margin-left: 10%;
+}
+.cardBox ul li {
+  font-size: 85%;
+  text-align: left !important;
+}

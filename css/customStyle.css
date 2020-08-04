@@ -1,4 +1,8 @@
 @media only screen and (max-device-width: 768px) {
+  .visitors {
+    width: 80% !important;
+    margin-left: 10% !important;
+  }
   #myModal {
     padding: 50% 0% !important;
   }
@@ -212,4 +216,12 @@
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+.visitors {
+  width: 30%;
+  margin-left: 35%;
+  border: 1px solid #e54029;
+  border-radius: 15px;
+  padding: 1% 0%;
+  margin-bottom: 2%;
 }
