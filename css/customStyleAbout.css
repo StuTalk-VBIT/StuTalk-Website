@@ -27,6 +27,9 @@
     font-size: 3rem !important;
     padding-top: 0% !important;
   }
+  #counter .row {
+    display: flex;
+  }
 }
 @media only screen and (max-device-width: 576px) {
   .faculty {
@@ -114,7 +117,7 @@
   padding: 2%;
 }
 article {
-  height: 100vh !important;
+  height: 70vh !important;
 }
 .blog-img {
   padding: 0 37.5% 0 37.5%;
