@@ -31,12 +31,12 @@ h4,
 h5,
 h6 {
   font-weight: 400;
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: "Anaheim", sans-serif;
   color: #afbac4;
 }
 
 p {
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: "Anaheim", sans-serif;
 }
 .navbar {
   border-radius: 0 !important;
@@ -463,7 +463,7 @@ a:hover {
 .header-bradcrumb .active {
   color: #cfcfcf;
   font-weight: 200;
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: "Anaheim", sans-serif;
 }
 
 .header-bradcrumb a:hover {
