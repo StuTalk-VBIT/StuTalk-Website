@@ -12,6 +12,9 @@ Tags: one-page, single-page, portfolio, custom-colors, post-formats, responsive,
 .active-page {
   color: #e54029 !important;
 }
+.btn {
+  text-transform: uppercase;
+}
 html {
   background-color: #fefefe;
   color: #ea5a12;
