@@ -18,6 +18,7 @@ Tags: one-page, single-page, portfolio, custom-colors, post-formats, responsive,
 html {
   background-color: #fefefe;
   color: #ea5a12;
+  overflow-x: hidden;
 }
 
 body {
