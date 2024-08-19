@@ -11,13 +11,12 @@
         <h1 class="text-center mt-5">Blog Posts</h1>
         <div id="blog-posts" class="row"></div>
     </div>
- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <!-- Firebase Module -->
-    <script type="module">
-        // Import Firebase modules
-         
 
+    <!-- Firebase Scripts for version 8.x.x -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
         // Your web app's Firebase configuration
         const firebaseConfig = {
             apiKey: "AIzaSyCTKt6Q_faQ-bmKXuq8kvE9DlcsxhPc50U",
@@ -30,14 +29,14 @@
         };
 
         // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
 
         // Fetch and display blog posts
         const blogPostsContainer = document.getElementById("blog-posts");
 
         async function displayBlogPosts() {
-            const querySnapshot = await getDocs(collection(db, "blogs"));
+            const querySnapshot = await db.collection("blogs").get();
             querySnapshot.forEach((doc) => {
                 const blog = doc.data();
                 const blogPost = `
