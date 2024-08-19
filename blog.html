@@ -167,7 +167,7 @@
 
         // Fetch and display blog posts
         window.onload = function() {
-            const postsContainer = document.getElementById('blogs');
+            const postsContainer = document.getElementById('blog-posts');
 
             db.collection("blogposts").orderBy("date", "desc").limit(6).get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
@@ -190,6 +190,8 @@
                     `;
                     postsContainer.appendChild(postElement);
                 });
+            }).catch((error) => {
+                console.error("Error fetching blog posts: ", error);
             });
         };
     </script>
