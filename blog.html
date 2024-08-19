@@ -5,10 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Blog</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .text-center {
+            margin-bottom: 30px;
+        }
+        .post-block {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .post-block:hover {
+            transform: scale(1.02);
+        }
+        .media-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+        .media-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: opacity 0.3s ease;
+        }
+        .post-block .content {
+            padding: 15px;
+        }
+        .post-block .content h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        .post-block .content a {
+            text-decoration: none;
+            color: #333;
+        }
+        .post-block .content a.btn-main {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .post-block .content a.btn-main:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center mt-5">Blog Posts</h1>
+        <h1 class="text-center">Blog Posts</h1>
         <div id="blog-posts" class="row"></div>
     </div>
 
@@ -40,9 +93,9 @@
             querySnapshot.forEach((doc) => {
                 const blog = doc.data();
                 const blogPost = `
-                    <article class="col-md-4 col-sm-6 col-xs-12 mb-30 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
+                    <article class="col-md-4 col-sm-6 col-xs-12 mb-30">
                         <div class="post-block">
-                            <div id="gallery-post" class="media-wrapper">
+                            <div class="media-wrapper">
                                 <div class="item">
                                     <img src="${blog.image}" alt="blog post" class="img-responsive" />
                                 </div>
@@ -50,7 +103,7 @@
                             <div class="content">
                                 <h3><a href="${blog.url}">${blog.title}</a></h3>
                                 <p>${blog.content.substring(0, 100)}...</p>
-                                <a class="btn btn-main" href="${blog.url}">Read more</a>
+                                <a class="btn-main" href="${blog.url}">Read more</a>
                             </div>
                         </div>
                     </article>`;
