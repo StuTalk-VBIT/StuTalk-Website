@@ -167,7 +167,7 @@
 
         // Fetch and display blog posts
         window.onload = function() {
-            const postsContainer = document.getElementById('blog-posts');
+            const postsContainer = document.getElementById('blogs');
 
             db.collection("blogposts").orderBy("date", "desc").limit(6).get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
