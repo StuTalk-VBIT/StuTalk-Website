@@ -3,71 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Blog</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta name="description" content="STUTALK - THE VOICE OF VBITIAN'S">
+    <title>StuTalk</title>
+    <link rel="shortcut icon" href="images/Favicon/Fav.png" />
+    <link rel="stylesheet" href="plugins/themefisher-font/style.css" />
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="plugins/animate-css/animate.css" />
+    <link rel="stylesheet" href="plugins/magnific-popup/dist/magnific-popup.css" />
+    <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/customStyleAbout.css" />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-        .container {
-            margin-top: 30px;
-        }
-        .text-center {
-            margin-bottom: 30px;
-        }
         .post-block {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+            padding: 15px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s;
         }
         .post-block:hover {
-            transform: scale(1.02);
+            transform: translateY(-10px);
         }
         .media-wrapper {
-            position: relative;
-            overflow: hidden;
+            margin-bottom: 15px;
         }
-        .media-wrapper img {
-            width: 100%;
+        .media-wrapper .item img {
+            max-width: 100%;
             height: auto;
-            display: block;
-            transition: opacity 0.3s ease;
+            border-radius: 5px;
         }
-        .post-block .content {
-            padding: 15px;
-        }
-        .post-block .content h3 {
-            margin: 0;
-            font-size: 1.5rem;
-        }
-        .post-block .content a {
-            text-decoration: none;
+        .content h3 a {
             color: #333;
+            text-decoration: none;
         }
-        .post-block .content a.btn-main {
-            background-color: #007bff;
+        .content h3 a:hover {
+            color: #e54029;
+        }
+        .btn-main {
+            background-color: #e54029;
             color: #fff;
+            border-radius: 3px;
             padding: 10px 20px;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
+            text-transform: uppercase;
         }
-        .post-block .content a.btn-main:hover {
-            background-color: #0056b3;
+        .btn-main:hover {
+            background-color: #d43f1b;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1 class="text-center">Blog Posts</h1>
-        <div id="blog-posts" class="row"></div>
-    </div>
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <header id="navigation" class="navbar navigation custom-navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand logo" href="#body">
+                    <img src="images/logo.png" alt="Website Logo" />
+                </a>
+            </div>
+            <nav class="collapse navbar-collapse navbar-right" role="Navigation">
+                <ul id="nav" class="nav navbar-nav navigation-menu">
+                    <li><a data-scroll href="./index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" style="background-color: #1d2024;">About Us <span class="caret"></span></a>
+                        <ul class="dropdown-menu" style="background-color: black;">
+                            <li><a data-scroll href="./about-us.html">Know Us</a></li>
+                            <li><a href="./alumni.html#our-faculty">Our Team</a></li>
+                            <li><a href="./alumni.html#alumni">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li><a data-scroll href="./index.html#magazines">Magazines</a></li>
+                    <li><a data-scroll href="./index.html#broadcast">Broadcast Journalism</a></li>
+                    <li><a data-scroll href="./Saadhya.html">Saadhya</a></li>
+                    <li><a class="active-page" data-scroll href="./blog.html">Blogs</a></li>
+                    <li><a data-scroll href="#contact-us">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <!-- Firebase Scripts for version 8.x.x -->
+    <section id="blog" class="section" style="padding-top: 2%;">
+        <div class="container">
+            <div class="row">
+                <div class="title text-center wow fadeInDown">
+                    <h2>Blog <span class="color">Posts</span></h2>
+                    <div class="border"></div>
+                </div>
+                <div id="blog-posts" class="row"></div>
+            </div>
+            <nav aria-label="Page navigation" class="text-center">
+                <ul class="pagination pagination-lg">
+                    <li><a class="active" href="blog.html">1</a></li>
+                    <li><a href="blogpage-2.html">2</a></li>
+                    <li><a href="blogpage-3.html">3</a></li>
+                    <li><a href="blogpage-4.html">4</a></li>
+                    <li><a href="blogpage-5.html">5</a></li>
+                    <li><a href="blogpage-6.html">6</a></li>
+                    <li><a href="blogpage-7.html">7</a></li>
+                    <li><a href="blogpage.html" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section id="contact-us" class="contact-us section-bg" style="padding-top: 2%;">
+        <div class="container">
+            <div class="row text-center">
+                <div class="contact-info col-md wow fadeInUp" data-wow-duration="500ms">
+                    <h4 style="padding: 0.5%; margin: 0; color: black;">
+                        <span style="color: #e54029;">Write to us at :</span>
+                        <a href="mailto:vbit.stutalk@gmail.com" style="text-decoration: underline;">vbit.stutalk@gmail.com</a>
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="social-icon" style="padding: 0;">
+                    <ul class="list-inline">
+                        <li><a href="https://www.instagram.com/vbit.stutalk/"><i class="tf-ion-social-instagram-outline"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCqsr0kgZjZnxQPV9i8UcX1A"><i class="tf-ion-social-youtube"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/stutalk-vbit/"><i class="tf-ion-social-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="plugins/jquery/dist/jquery.min.js"></script>
+    <script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+    <script src="plugins/filterzr/jquery.filterizr.min.js"></script>
+    <script src="plugins/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
+    <script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+    <script src="plugins/Sticky/jquery.sticky.js"></script>
+    <script src="plugins/count-to/jquery.countTo.js"></script>
+    <script src="plugins/wow/dist/wow.min.js"></script>
+    <script src="js/script.js"></script>
 
     <script>
         // Your web app's Firebase configuration
@@ -86,32 +166,32 @@
         const db = firebase.firestore();
 
         // Fetch and display blog posts
-        const blogPostsContainer = document.getElementById("blog-posts");
+        window.onload = function() {
+            const postsContainer = document.getElementById('blog-posts');
 
-        async function displayBlogPosts() {
-            const querySnapshot = await db.collection("blogs").get();
-            querySnapshot.forEach((doc) => {
-                const blog = doc.data();
-                const blogPost = `
-                    <article class="col-md-4 col-sm-6 col-xs-12 mb-30">
+            db.collection("blogposts").orderBy("date", "desc").limit(6).get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    const postData = doc.data();
+                    const postElement = document.createElement('div');
+                    postElement.classList.add('col-md-4');
+                    postElement.innerHTML = `
                         <div class="post-block">
                             <div class="media-wrapper">
                                 <div class="item">
-                                    <img src="${blog.image}" alt="blog post" class="img-responsive" />
+                                    <img src="${postData.imageURL}" alt="Post Image" />
                                 </div>
                             </div>
                             <div class="content">
-                                <h3><a href="${blog.url}">${blog.title}</a></h3>
-                                <p>${blog.content.substring(0, 100)}...</p>
-                                <a class="btn-main" href="${blog.url}">Read more</a>
+                                <h3><a href="blog-single.html?id=${doc.id}">${postData.title}</a></h3>
+                                <p>${postData.excerpt}</p>
+                                <a href="blog-single.html?id=${doc.id}" class="btn-main">Read More</a>
                             </div>
                         </div>
-                    </article>`;
-                blogPostsContainer.innerHTML += blogPost;
+                    `;
+                    postsContainer.appendChild(postElement);
+                });
             });
-        }
-
-        displayBlogPosts();
+        };
     </script>
 </body>
 </html>
