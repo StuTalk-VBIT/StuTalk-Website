@@ -11,18 +11,12 @@
         <h1 class="text-center mt-5">Blog Posts</h1>
         <div id="blog-posts" class="row"></div>
     </div>
-
+ <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <!-- Firebase Module -->
     <script type="module">
         // Import Firebase modules
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.13/firebase-app.js'
-
-    // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
-    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.13/firebase-analytics.js'
-
-    // Add Firebase products that you want to use
-    import { getAuth } from 'https://www.gstatic.com/firebasejs/10.13/firebase-auth.js'
-    import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.13/firebase-firestore.js'
+         
 
         // Your web app's Firebase configuration
         const firebaseConfig = {
