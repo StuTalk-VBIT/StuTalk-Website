@@ -12,36 +12,32 @@
         <div id="blog-posts" class="row"></div>
     </div>
 
-   <script type="module">
-    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.13/firebase-app.js'
+    <!-- Firebase Module -->
+    <script type="module">
+        // Import Firebase modules
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.13/firebase-app.js';
+        import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/10.13/firebase-firestore.js';
 
-    // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
-    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.13/firebase-analytics.js'
-
-    // Add Firebase products that you want to use
-    import { getAuth } from 'https://www.gstatic.com/firebasejs/10.13/firebase-auth.js'
-    import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.13/firebase-firestore.js'
-
-
-    <script>
         // Your web app's Firebase configuration
-     const firebaseConfig = {
-  apiKey: "AIzaSyCTKt6Q_faQ-bmKXuq8kvE9DlcsxhPc50U",
-  authDomain: "stutalk-3a05c.firebaseapp.com",
-  projectId: "stutalk-3a05c",
-  storageBucket: "stutalk-3a05c.appspot.com",
-  messagingSenderId: "745379808991",
-  appId: "1:745379808991:web:30ae8dcdcb2b3d83ad4b6a",
-  measurementId: "G-6522WFTXWB"
-};
+        const firebaseConfig = {
+            apiKey: "AIzaSyCTKt6Q_faQ-bmKXuq8kvE9DlcsxhPc50U",
+            authDomain: "stutalk-3a05c.firebaseapp.com",
+            projectId: "stutalk-3a05c",
+            storageBucket: "stutalk-3a05c.appspot.com",
+            messagingSenderId: "745379808991",
+            appId: "1:745379808991:web:30ae8dcdcb2b3d83ad4b6a",
+            measurementId: "G-6522WFTXWB"
+        };
 
         // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
 
         // Fetch and display blog posts
-        db.collection("blogs").get().then((querySnapshot) => {
-            const blogPostsContainer = document.getElementById("blog-posts");
+        const blogPostsContainer = document.getElementById("blog-posts");
+
+        async function displayBlogPosts() {
+            const querySnapshot = await getDocs(collection(db, "blogs"));
             querySnapshot.forEach((doc) => {
                 const blog = doc.data();
                 const blogPost = `
@@ -61,7 +57,9 @@
                     </article>`;
                 blogPostsContainer.innerHTML += blogPost;
             });
-        });
+        }
+
+        displayBlogPosts();
     </script>
 </body>
 </html>
