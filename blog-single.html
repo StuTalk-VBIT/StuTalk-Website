@@ -141,7 +141,7 @@
 
       // Fetch blog data by ID from Firestore
       function fetchBlogData(blogId) {
-        db.collection("blogs")
+        db.collection("blogposts")
           .doc(blogId)
           .get()
           .then((doc) => {
