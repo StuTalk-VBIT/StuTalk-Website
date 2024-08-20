@@ -112,7 +112,10 @@
             <img class="img-fluid img-blog mb-50" id="blog-image" src="" alt="image" />
           </div>
           <div class="col-lg-12">
-            <div id="blog-content"></div> <!-- Changed to div for HTML content -->
+            <div id="blog-content"></div>
+            <blockquote>
+              <p id="blog-expt">“</p>
+              </blockquote><!-- Changed to div for HTML content -->
           </div>
         </div>
       </div>
@@ -172,7 +175,8 @@
             document.getElementById("blog-author").innerText = blogData.author;
             document.getElementById("blog-class").innerText = blogData.class;
             document.getElementById("blog-image").src = blogData.imageURL;
-            document.getElementById("blog-content").innerHTML = blogData.content; // Changed to innerHTML
+            document.getElementById("blog-content").innerHTML = blogData.content;
+             document.getElementById("blog-expt").innerHTML = blogData.excerpt;// Changed to innerHTML
           } else {
             console.log("No such blog!");
           }
