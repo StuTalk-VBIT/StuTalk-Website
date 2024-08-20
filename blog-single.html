@@ -108,10 +108,10 @@
               <li id="blog-author" class="list-inline-item"></li>
               <li id="blog-class" class="list-inline-item"></li>
             </ul>
-            <img class="img-fluid img-blog mb-50" id="blog-image" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjc4Z3l0bDQ4ZXZyaGMweHVuZXNhNG9rODdyYWs5ZXdha3VkbW42biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QunG7yCW2hOyviN6Nt/giphy.webp" alt="image" />
+            <img class="img-fluid img-blog mb-50" id="blog-image" src="" alt="image" />
           </div>
           <div class="col-lg-12">
-            <p id="blog-content"></p>
+            <div id="blog-content"></div> <!-- Changed to div for HTML content -->
           </div>
         </div>
       </div>
@@ -171,7 +171,7 @@
             document.getElementById("blog-author").innerText = blogData.author;
             document.getElementById("blog-class").innerText = blogData.class;
             document.getElementById("blog-image").src = blogData.imageURL;
-            document.getElementById("blog-content").innerText = blogData.content;
+            document.getElementById("blog-content").innerHTML = blogData.content; // Changed to innerHTML
           } else {
             console.log("No such blog!");
           }
@@ -205,8 +205,6 @@
   <script src="plugins/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
   <script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
   <script src="plugins/Sticky/jquery.sticky.js"></script>
-  <script src="plugins/count-to/jquery.countTo.js"></script>
-  <script src="plugins/wow/dist/wow.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/theme.js"></script>
 </body>
 </html>
