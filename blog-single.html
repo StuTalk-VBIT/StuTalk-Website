@@ -106,7 +106,6 @@
             <h1 id="blog-title"></h1>
             <ul class="list-inline mb-50">
               <li id="blog-author" class="list-inline-item"></li>
-               <li class="list-inline-item">Class of</li>
               <li id="blog-class" class="list-inline-item"></li>
             </ul>
             <img class="img-fluid img-blog mb-50" id="blog-image" src="https://cdn.dribbble.com/users/2973561/screenshots/5757826/loading__.gif" alt="image" />
@@ -178,7 +177,7 @@
             const blogData = doc.data();
             document.getElementById("blog-title").innerText = blogData.title;
             document.getElementById("blog-author").innerText = blogData.author;
-            document.getElementById("blog-class").innerText = blogData.class;
+            document.getElementById("blog-class").innerText = `Class of ${blogData.class}`;
             document.getElementById("blog-image").src = blogData.imageURL;
             document.getElementById("blog-content").innerHTML = blogData.content;
             document.getElementById("blog-expt").innerHTML = blogData.excerpt;// Changed to innerHTML
