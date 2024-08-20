@@ -1,186 +1,203 @@
 <!DOCTYPE html>
 <html class="no-js">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="STUTALK - THE VOICE OF VBITIAN'S"
-    />
-    <title>StuTalk</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="STUTALK - THE VOICE OF VBITIAN'S" />
+  <title>StuTalk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="images/Favicon/Fav.png" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/Favicon/Fav.png" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="plugins/themefisher-font/style.css" />
-    <link
-      rel="stylesheet"
-      href="plugins/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="plugins/animate-css/animate.css" />
-    <link
-      rel="stylesheet"
-      href="plugins/magnific-popup/dist/magnific-popup.css"
-    />
-    <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css" />
-    <link
-      rel="stylesheet"
-      href="plugins/slick-carousel/slick/slick-theme.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/customStyle.css" />
-  </head>
+  <!-- CSS -->
+  <link rel="stylesheet" href="plugins/themefisher-font/style.css" />
+  <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/animate-css/animate.css" />
+  <link rel="stylesheet" href="plugins/magnific-popup/dist/magnific-popup.css" />
+  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css" />
+  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/customStyle.css" />
 
-  <body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
-    <!-- Fixed Navigation -->
-    <header id="navigation" class="navbar navigation custom-navbar">
-      <div class="container">
-        <div class="navbar-header">
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-toggle="collapse"
-            data-target=".navbar-collapse"
-          >
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand logo" href="#body">
-            <img src="images/logo.png" alt="Website Logo" />
-          </a>
-        </div>
+  <!-- Loader CSS -->
+  <style>
+    /* Loader styles */
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .spinner {
+      border: 8px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 8px solid #3498db;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
 
-        <nav class="collapse navbar-collapse navbar-right" role="Navigation">
-          <ul id="nav" class="nav navbar-nav navigation-menu">
-            <li><a href="./index.html">Home</a></li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown">About Us <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="./about-us.html">Know Us</a></li>
-                <li><a href="./alumni.html#our-faculty">Our Team</a></li>
-                <li><a href="./alumni.html#alumni">Alumni</a></li>
-              </ul>
-            </li>
-            <li><a href="./index.html#magazines">Magazines</a></li>
-            <li><a href="./Saadhya.html">Saadhya</a></li>
-            <li>
-              <a class="active-page" href="./blog.html">Blogs</a>
-            </li>
-            <li><a href="#contact-us">Contact</a></li>
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
+  <!-- Loader -->
+  <div id="loader" class="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Fixed Navigation -->
+  <header id="navigation" class="navbar navigation custom-navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand logo" href="#body">
+          <img src="images/logo.png" alt="Website Logo" />
+        </a>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-right" role="Navigation">
+        <ul id="nav" class="nav navbar-nav navigation-menu">
+          <li><a href="./index.html">Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">About Us <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="./about-us.html">Know Us</a></li>
+              <li><a href="./alumni.html#our-faculty">Our Team</a></li>
+              <li><a href="./alumni.html#alumni">Alumni</a></li>
+            </ul>
+          </li>
+          <li><a href="./index.html#magazines">Magazines</a></li>
+          <li><a href="./Saadhya.html">Saadhya</a></li>
+          <li>
+            <a class="active-page" href="./blog.html">Blogs</a>
+          </li>
+          <li><a href="#contact-us">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 id="blog-title">Blog Title</h1>
+          <ul class="list-inline mb-50">
+            <li id="blog-author" class="list-inline-item">Author Name</li>
+            <li id="blog-class" class="list-inline-item">Class</li>
           </ul>
-        </nav>
-      </div>
-    </header>
-
-    <section class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h1 id="blog-title">Blog Title</h1>
-            <ul class="list-inline mb-50">
-              <li id="blog-author" class="list-inline-item">Author Name</li>
-              <li id="blog-class" class="list-inline-item">Class</li>
-            </ul>
-            <img
-              class="img-fluid img-blog mb-50"
-              id="blog-image"
-              src="images/blog/Trial.png"
-              alt="image"
-            />
-          </div>
-          <div class="col-lg-12">
-            <p id="blog-content">Blog content goes here...</p>
-          </div>
+          <img class="img-fluid img-blog mb-50" id="blog-image" src="images/blog/Trial.png" alt="image" />
+        </div>
+        <div class="col-lg-12">
+          <p id="blog-content">Blog content goes here...</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Us -->
-    <section id="contact-us" class="contact-us section-bg" style="padding-top: 2%;">
-      <div class="container">
-        <div class="row text-center">
-          <div class="contact-info col-md">
-            <h4 style="color: black;">
-              <span style="color: #e54029;">Write to us at :</span>
-              <a href="mailto:vbit.stutalk@gmail.com">vbit.stutalk@gmail.com</a>
-            </h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="social-icon">
-            <ul class="list-inline">
-              <li><a href="https://www.instagram.com/vbit.stutalk/"><i class="tf-ion-social-instagram-outline"></i></a></li>
-              <li><a href="https://www.youtube.com/channel/UCqsr0kgZjZnxQPV9i8UcX1A"><i class="tf-ion-social-youtube"></i></a></li>
-              <li><a href="https://www.linkedin.com/company/stutalk-vbit/"><i class="tf-ion-social-linkedin"></i></a></li>
-            </ul>
-          </div>
+  <!-- Contact Us -->
+  <section id="contact-us" class="contact-us section-bg" style="padding-top: 2%;">
+    <div class="container">
+      <div class="row text-center">
+        <div class="contact-info col-md">
+          <h4 style="color: black;">
+            <span style="color: #e54029;">Write to us at :</span>
+            <a href="mailto:vbit.stutalk@gmail.com">vbit.stutalk@gmail.com</a>
+          </h4>
         </div>
       </div>
-    </section>
+      <div class="row">
+        <div class="social-icon">
+          <ul class="list-inline">
+            <li><a href="https://www.instagram.com/vbit.stutalk/"><i class="tf-ion-social-instagram-outline"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCqsr0kgZjZnxQPV9i8UcX1A"><i class="tf-ion-social-youtube"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/stutalk-vbit/"><i class="tf-ion-social-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Firebase and Firestore integration -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <!-- Firebase and Firestore integration -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 
-    <!-- Firebase Configuration -->
-    <script>
-      var firebaseConfig = {
+  <!-- Firebase Configuration -->
+  <script>
+    var firebaseConfig = {
       apiKey: "AIzaSyCTKt6Q_faQ-bmKXuq8kvE9DlcsxhPc50U",
-  authDomain: "stutalk-3a05c.firebaseapp.com",
-  projectId: "stutalk-3a05c",
-  storageBucket: "stutalk-3a05c.appspot.com",
-  messagingSenderId: "745379808991",
-  appId: "1:745379808991:web:30ae8dcdcb2b3d83ad4b6a",
-  measurementId: "G-6522WFTXWB"
-      };
-      firebase.initializeApp(firebaseConfig);
-      var db = firebase.firestore();
+      authDomain: "stutalk-3a05c.firebaseapp.com",
+      projectId: "stutalk-3a05c",
+      storageBucket: "stutalk-3a05c.appspot.com",
+      messagingSenderId: "745379808991",
+      appId: "1:745379808991:web:30ae8dcdcb2b3d83ad4b6a",
+      measurementId: "G-6522WFTXWB"
+    };
+    firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
 
-      // Fetch blog data by ID from Firestore
-      function fetchBlogData(blogId) {
-        db.collection("blogposts")
-          .doc(blogId)
-          .get()
-          .then((doc) => {
-            if (doc.exists) {
-              const blogData = doc.data();
-              document.getElementById("blog-title").innerText = blogData.title;
-              document.getElementById("blog-author").innerText = blogData.author;
-              document.getElementById("blog-class").innerText = blogData.class;
-              document.getElementById("blog-image").src = blogData.imageURL;
-              document.getElementById("blog-content").innerText = blogData.content;
-            } else {
-              console.log("No such blog!");
-            }
-          })
-          .catch((error) => {
-            console.error("Error fetching blog: ", error);
-          });
-      }
+    // Fetch blog data by ID from Firestore
+    function fetchBlogData(blogId) {
+      db.collection("blogposts")
+        .doc(blogId)
+        .get()
+        .then((doc) => {
+          if (doc.exists) {
+            const blogData = doc.data();
+            document.getElementById("blog-title").innerText = blogData.title;
+            document.getElementById("blog-author").innerText = blogData.author;
+            document.getElementById("blog-class").innerText = blogData.class;
+            document.getElementById("blog-image").src = blogData.imageURL;
+            document.getElementById("blog-content").innerText = blogData.content;
+          } else {
+            console.log("No such blog!");
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching blog: ", error);
+        });
+    }
 
-      // Assume the blog ID is passed via query parameters
-      const urlParams = new URLSearchParams(window.location.search);
-      const blogId = urlParams.get("id");
-      if (blogId) {
-        fetchBlogData(blogId);
-      } else {
-        console.error("Blog ID not provided in URL");
-      }
-    </script>
+    // Assume the blog ID is passed via query parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const blogId = urlParams.get("id");
+    if (blogId) {
+      fetchBlogData(blogId);
+    } else {
+      console.error("Blog ID not provided in URL");
+    }
 
-    <!-- Other Scripts -->
-    <script src="plugins/jquery/dist/jquery.min.js"></script>
-    <script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="plugins/slick-carousel/slick/slick.min.js"></script>
-    <script src="plugins/filterzr/jquery.filterizr.min.js"></script>
-    <script src="plugins/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
-    <script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-    <script src="plugins/Sticky/jquery.sticky.js"></script>
-    <script src="plugins/count-to/jquery.countTo.js"></script>
-    <script src="plugins/wow/dist/wow.min.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+    // Hide loader after content is loaded
+    window.addEventListener('load', () => {
+      document.getElementById('loader').style.display = 'none';
+    });
+  </script>
+
+  <!-- Other Scripts -->
+  <script src="plugins/jquery/dist/jquery.min.js"></script>
+  <script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+  <script src="plugins/filterzr/jquery.filterizr.min.js"></script>
+  <script src="plugins/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
+  <script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+  <script src="plugins/Sticky/jquery.sticky.js"></script>
+  <script src="plugins/count-to/jquery.countTo.js"></script>
+  <script src="plugins/wow/dist/wow.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
 </html>
