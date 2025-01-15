@@ -49,6 +49,96 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/customStyle.css" />
     <link rel="stylesheet" href="css/scrollAnimation.css" />
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+      import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyCTKt6Q_faQ-bmKXuq8kvE9DlcsxhPc50U",
+        authDomain: "stutalk-3a05c.firebaseapp.com",
+        projectId: "stutalk-3a05c",
+        storageBucket: "stutalk-3a05c.appspot.com",
+        messagingSenderId: "745379808991",
+        appId: "1:745379808991:web:30ae8dcdcb2b3d83ad4b6a",
+        measurementId: "G-6522WFTXWB"
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      document.addEventListener('DOMContentLoaded', async () => {
+        const writerContainer = document.getElementById('writer-container');
+        const magazinesContainer = document.getElementById('magazines-container');
+
+        async function loadWriterOfTheMonth() {
+          try {
+            const querySnapshot = await getDocs(collection(db, "wom"));
+            writerContainer.innerHTML = "";
+
+            querySnapshot.forEach((doc) => {
+              const writer = doc.data();
+              writer.id = doc.id;
+
+              const writerDiv = document.createElement('div');
+              writerDiv.className = 'item text-center';
+              writerDiv.innerHTML = `
+                <div class="client-thumb">
+                  <img src="${writer.imageURL}" class="img-responsive" alt="Winner" style="height: 200px; width: 200px;">
+                </div>
+                <div class="client-info">
+                  <div class="client-meta">
+                    <h3>${writer.title}</h3>
+                    <span>Winner - ${writer.excerpt}</span>
+                  </div>
+                	<div class="client-comment">
+									<p> Congratulations to our winner!
+										<br>
+										Talent will always be appreciated here at StuTalk. <br> YOU could be our next winner. So, what are you waiting for? Mail us your blogs to contend! 
+									</p>
+								</div>
+                </div>
+                <div class="all-post text-center">
+                  <a class="btn btn-main" href="${writer.blogURL}" style="color:white;">Read the winner's blog</a>
+                </div>
+              `;
+              writerContainer.appendChild(writerDiv);
+            });
+          } catch (error) {
+            console.error('Error loading writer of the month:', error);
+          }
+        }
+
+        async function loadFeaturedMagazines() {
+          try {
+            const querySnapshot = await getDocs(collection(db, "fm"));
+            magazinesContainer.innerHTML = "";
+
+            let count = 0;
+            querySnapshot.forEach((doc) => {
+              if (count < 3) {
+                const magazine = doc.data();
+                magazine.id = doc.id;
+
+                const magazineDiv = document.createElement('div');
+                magazineDiv.className = 'magazine-block col-lg-3 text-center';
+                magazineDiv.innerHTML = `
+                  <a href="./magazines/volume-18-issue-01/magazine.html?id=${magazine.id}">
+                    <img class="img-responsive" src="${magazine.imageURL}" alt="${magazine.title}" />
+                  </a>
+                `;
+                magazinesContainer.appendChild(magazineDiv);
+                count++;
+              }
+            });
+          } catch (error) {
+            console.error('Error loading featured magazines:', error);
+          }
+        }
+
+        loadWriterOfTheMonth();
+        loadFeaturedMagazines();
+      });
+    </script>
   </head>
 
   <body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -251,52 +341,23 @@ Welcome Slider
 
     <!-- Start Writer of the month
 		=========================================== -->
-	<section id="testimonial" class="testimonial overly section bg-2">
-		<div class="container">
-			<div class="row">
-				<div class="title text-center wow fadeInUp" data-wow-duration="500ms">
-					<h2 style="color: white;">Writer of the <span class="color">Month</span></h2>
-					<div class="border"></div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<!-- testimonial wrapper -->
-					<div class="wow fadeInUp" data-wow-duration="500ms" data-wow-delay="100ms">
-
-						<!-- testimonial single -->
-						<div class="item text-center">
-
-							<!-- client photo -->
-							<div class="client-thumb">
-								<img src="images/wom/MAY2024.png" class="img-responsive" alt="Winner" style="height: 200px; width: 200px;">
-							</div>
-							<!-- /client photo -->
-
-							<!-- client info -->
-							<div class="client-info">
-								<div class="client-meta">
-								<h3>P. Laasyakshara             </h3>
-									<span>Winner - May</span>
-								</div>
-								<div class="client-comment">
-									<p> Congratulations to our winner!
-										<br>
-										Talent will always be appreciated here at StuTalk. <br> YOU could be our next winner. So, what are you waiting for? Mail us your blogs to contend! 
-									</p>
-								</div>
-							</div>
-							<!-- /client info -->
-							<div class="all-post text-center">
-								<a class="btn btn-main" href="blog-80.html" style="color:white;">Read the winner's blog</a>
-							</div>
-						</div>
-						<!-- /testimonial single -->
-					</div> <!-- end testimonial wrapper -->
-				</div> <!-- end col lg 12 -->
-			</div> <!-- End row -->
-		</div> <!-- End container -->
-	</section> <!-- End Section -->
+	  <section id="testimonial" class="testimonial overly section bg-2">
+      <div class="container">
+        <div class="row">
+          <div class="title text-center wow fadeInUp" data-wow-duration="500ms">
+            <h2 style="color: white;">Writer of the <span class="color">Month</span></h2>
+            <div class="border"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div id="writer-container" class="wow fadeInUp" data-wow-duration="500ms" data-wow-delay="100ms">
+              <!-- Writer of the Month content will be loaded here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 	<!-- Start Blog Section =========================================== -->
 
@@ -470,10 +531,7 @@ Welcome Slider
         <div class="row">
           <div class="col-lg-12">
             <!-- section title -->
-            <div
-              class="title text-center"
-              style="text-shadow: 0px 2px 25px black;"
-            >
+            <div class="title text-center" style="text-shadow: 0px 2px 25px black;">
               <h2>Our <span class="color">magazines</span></h2>
               <div class="border"></div>
             </div>
@@ -483,43 +541,8 @@ Welcome Slider
         </div>
         <!-- end row -->
 
-        <div class="row text-center">
-          </div>
-	      
-	        <div class="magazine-block col-lg-3 text-center">
-            <a href="./magazines/volume-18-issue-01/magazine.html"
-              ><img
-                class="img-responsive"
-                src="images/magazines/volume-18-issue-01.jpg"
-                alt="volume-13-issue-02"
-            /></a>
-          </div>
-	      
-          <div class="magazine-block col-lg-3 text-center">
-            <a href="./magazines/latest-edition/magazine.html"
-              ><img
-                class="img-responsive"
-                src="images/magazines/volume-17-issue-02.jpg"
-                alt=""
-            /></a>
-          </div>
-          <div class="magazine-block col-lg-3 text-center">
-            <a href="./magazines/volume-16-issue-01/magazine.html"
-              ><img
-                class="img-responsive"
-                src="images/magazines/volume-17-issue-01.jpg"
-                alt=""
-            /></a>
-          </div>
-        
-          <!-- <div class="magazine-block col-lg-3 text-center">
-            <a href="./magazines/volume-13-issue-01/magazine-view.html"
-              ><img
-                class="img-responsive"
-                src="images/magazines/volume-13-issue-01.jpeg"
-                alt="volume-13-issue-01"
-            /></a>
-          </div> -->
+        <div class="row text-center" id="magazines-container">
+          <!-- Featured Magazines content will be loaded here -->
         </div>
       </div>
       <!-- end container -->
