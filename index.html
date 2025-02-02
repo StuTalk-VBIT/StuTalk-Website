@@ -1,145 +1,160 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-  <!--<![endif]-->
-
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta
-      name="description"
-      content="StuTalk-VBIT | The official campus magazine of VBIT "
-    />
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="STUTALK - THE VOICE OF VBITIAN'S">
     <title>StuTalk</title>
-
-    <!-- Mobile Specific Meta
-		================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Favicon -->
     <link rel="shortcut icon" href="images/Favicon/Fav.png" />
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" /> -->
-
-    <!-- CSS
-		================================================== -->
-    <!-- Fontawesome Icon font -->
     <link rel="stylesheet" href="plugins/themefisher-font/style.css" />
-    <!-- bootstrap.min css -->
-    <link
-      rel="stylesheet"
-      href="plugins/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <!-- Animate.css -->
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="plugins/animate-css/animate.css" />
-    <!-- Magnific popup css -->
-    <link
-      rel="stylesheet"
-      href="plugins/magnific-popup/dist/magnific-popup.css"
-    />
-    <!-- Slick Carousel -->
+    <link rel="stylesheet" href="plugins/magnific-popup/dist/magnific-popup.css" />
     <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css" />
-    <link
-      rel="stylesheet"
-      href="plugins/slick-carousel/slick/slick-theme.css"
-    />
-    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/customStyle.css" />
     <link rel="stylesheet" href="css/scrollAnimation.css" />
+
+    <!-- Firebase Scripts -->
     <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-      import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+        import { getFirestore, collection, getDocs, query, orderBy, limit } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 
-      const firebaseConfig = {
-        apiKey: "AIzaSyCTKt6Q_faQ-bmKXuq8kvE9DlcsxhPc50U",
-        authDomain: "stutalk-3a05c.firebaseapp.com",
-        projectId: "stutalk-3a05c",
-        storageBucket: "stutalk-3a05c.appspot.com",
-        messagingSenderId: "745379808991",
-        appId: "1:745379808991:web:30ae8dcdcb2b3d83ad4b6a",
-        measurementId: "G-6522WFTXWB"
-      };
+        const firebaseConfig = {
+            apiKey: "AIzaSyCTKt6Q_faQ-bmKXuq8kvE9DlcsxhPc50U",
+            authDomain: "stutalk-3a05c.firebaseapp.com",
+            projectId: "stutalk-3a05c",
+            storageBucket: "stutalk-3a05c.appspot.com",
+            messagingSenderId: "745379808991",
+            appId: "1:745379808991:web:30ae8dcdcb2b3d83ad4b6a",
+            measurementId: "G-6522WFTXWB"
+        };
 
-      const app = initializeApp(firebaseConfig);
-      const db = getFirestore(app);
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
 
-      document.addEventListener('DOMContentLoaded', async () => {
-        const writerContainer = document.getElementById('writer-container');
-        const magazinesContainer = document.getElementById('magazines-container');
+        document.addEventListener('DOMContentLoaded', async () => {
+            const writerContainer = document.getElementById('writer-container');
+            const magazinesContainer = document.getElementById('magazines-container');
+            const blogContainer = document.getElementById('blog-entries-container');
 
-        async function loadWriterOfTheMonth() {
-          try {
-            const querySnapshot = await getDocs(collection(db, "wom"));
-            writerContainer.innerHTML = "";
+            async function loadWriterOfTheMonth() {
+                try {
+                    const querySnapshot = await getDocs(collection(db, "wom"));
+                    writerContainer.innerHTML = "";
 
-            querySnapshot.forEach((doc) => {
-              const writer = doc.data();
-              writer.id = doc.id;
+                    querySnapshot.forEach((doc) => {
+                        const writer = doc.data();
+                        writer.id = doc.id;
 
-              const writerDiv = document.createElement('div');
-              writerDiv.className = 'item text-center';
-              writerDiv.innerHTML = `
-                <div class="client-thumb">
-                  <img src="${writer.imageURL}" class="img-responsive" alt="Winner" style="height: 200px; width: 200px;">
-                </div>
-                <div class="client-info">
-                  <div class="client-meta">
-                    <h3>${writer.name}</h3>
-                    <span>Winner - ${writer.month}</span>
-                  </div>
-                	<div class="client-comment">
-									<p> Congratulations to our winner!
-										<br>
-										Talent will always be appreciated here at StuTalk. <br> YOU could be our next winner. So, what are you waiting for? Mail us your blogs to contend! 
-									</p>
-								</div>
-                </div>
-                <div class="all-post text-center">
-                  <a class="btn btn-main" href="${writer.blogLink}" style="color:white;">Read the winner's blog</a>
-                </div>
-              `;
-              writerContainer.appendChild(writerDiv);
-            });
-          } catch (error) {
-            console.error('Error loading writer of the month:', error);
-          }
-        }
+                        const writerDiv = document.createElement('div');
+                        writerDiv.className = 'item text-center';
+                        writerDiv.innerHTML = `
+                            <div class="client-thumb">
+                                <img src="${writer.imageURL}" class="img-responsive" alt="Winner" style="height: 200px; width: 200px;">
+                            </div>
+                            <div class="client-info">
+                                <div class="client-meta">
+                                    <h3>${writer.name}</h3>
+                                    <span>Winner - ${writer.month}</span>
+                                </div>
+                                <div class="client-comment">
+                                    <p> Congratulations to our winner!
+                                        <br>
+                                        Talent will always be appreciated here at StuTalk. <br> YOU could be our next winner. So, what are you waiting for? Mail us your blogs to contend! 
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="all-post text-center">
+                                <a class="btn btn-main" href="${writer.blogLink}" style="color:white;">Read the winner's blog</a>
+                            </div>
+                        `;
+                        writerContainer.appendChild(writerDiv);
+                    });
+                } catch (error) {
+                    console.error('Error loading writer of the month:', error);
+                }
+            }
 
-        async function loadFeaturedMagazines() {
-          try {
-            const querySnapshot = await getDocs(collection(db, "fm"));
-            magazinesContainer.innerHTML = "";
+            async function loadFeaturedMagazines() {
+                try {
+                    const querySnapshot = await getDocs(collection(db, "fm"));
+                    magazinesContainer.innerHTML = "";
 
-            let count = 0;
-            querySnapshot.forEach((doc) => {
-              if (count < 3) {
-                const magazine = doc.data();
-                magazine.id = doc.id;
+                    let count = 0;
+                    querySnapshot.forEach((doc) => {
+                        if (count < 3) {
+                            const magazine = doc.data();
+                            magazine.id = doc.id;
 
-                const magazineDiv = document.createElement('div');
-                magazineDiv.className = 'magazine-block col-lg-3 text-center';
-                magazineDiv.innerHTML = `
-                  <a href="./magazines/volume/magazine.html?id=${magazine.id}">
-                    <img class="img-responsive" src="${magazine.imageURL}" alt="${magazine.title}" />
-                  </a>
-                `;
-                magazinesContainer.appendChild(magazineDiv);
-                count++;
-              }
-            });
-          } catch (error) {
-            console.error('Error loading featured magazines:', error);
-          }
-        }
+                            const magazineDiv = document.createElement('div');
+                            magazineDiv.className = 'magazine-block col-lg-3 text-center';
+                            magazineDiv.innerHTML = `
+                                <a href="./magazines/volume/magazine.html?id=${magazine.id}">
+                                    <img class="img-responsive" src="${magazine.imageURL}" alt="${magazine.title}" />
+                                </a>
+                            `;
+                            magazinesContainer.appendChild(magazineDiv);
+                            count++;
+                        }
+                    });
+                } catch (error) {
+                    console.error('Error loading featured magazines:', error);
+                }
+            }
 
-        loadWriterOfTheMonth();
-        loadFeaturedMagazines();
-      });
+            async function loadBlogEntries() {
+                try {
+                    const blogQuery = query(
+                        collection(db, "blogposts"),
+                        orderBy("date", "desc"),
+                        limit(3)
+                    );
+                    
+                    const querySnapshot = await getDocs(blogQuery);
+                    blogContainer.innerHTML = "";
+
+                    querySnapshot.forEach((doc) => {
+                        const blog = doc.data();
+                        blog.id = doc.id;
+
+                        const blogArticle = document.createElement('article');
+                        blogArticle.className = 'col-md-4 col-sm-6 col-xs-12 mb-30 wow fadeInUp';
+                        blogArticle.setAttribute('data-wow-duration', '500ms');
+                        blogArticle.setAttribute('data-wow-delay', '200ms');
+
+                        blogArticle.innerHTML = `
+                            <div class="post-block">
+                                <div id="gallery-post" class="media-wrapper">
+                                    <div class="item">
+                                        <img src="${blog.imageURL}" alt="blog post" class="img-responsive" />
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        <a href="blog-${blog.id}.html">${blog.title}</a>
+                                    </h3>
+                                    <p>${blog.excerpt}</p>
+                                    <a class="btn btn-main" href="blog-${blog.id}.html">Read more</a>
+                                </div>
+                            </div>
+                        `;
+
+                        blogContainer.appendChild(blogArticle);
+                    });
+                } catch (error) {
+                    console.error('Error loading blog entries:', error);
+                }
+            }
+
+            // Load all dynamic content
+            loadWriterOfTheMonth();
+            loadFeaturedMagazines();
+            loadBlogEntries();
+        });
     </script>
-  </head>
+</head>
 
   <body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
     <!--
@@ -361,122 +376,24 @@ Welcome Slider
 
 	<!-- Start Blog Section =========================================== -->
 
-	<section id="blog" class="section">
-		<div class="container">
-			<div class="row">
-				<!-- section title -->
-				<div class="title text-center wow fadeInDown">
-					<h2> Blog <span class="color">Entries</span></h2>
-					<div class="border"></div>
-				</div>
-				<!-- /section title -->
-				<div class="clearfix">
-
-					
-       
-          <article
-          class="col-md-4 col-sm-6 col-xs-12 mb-30 wow fadeInUp"
-          data-wow-duration="500ms"
-          data-wow-delay="200ms"
-        >
-          <div class="post-block">
-            <div id="gallery-post" class="media-wrapper">
-              <div class="item">
-                <img
-                  src="images/blog/blog-78-1.png"
-                  alt="blog post"
-                  class="img-responsive"
-                />
-              </div>
+  <section id="blog" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="title text-center wow fadeInDown">
+                <h2>Blog <span class="color">Entries</span></h2>
+                <div class="border"></div>
             </div>
-
-            <div class="content">
-              <h3>
-                <a href="blog-78.html">A STURDY WOMAN</a
-                >
-              </h3>
-              <p>
-                Have you felt it was unfair, how for decades women were oppressed and mistreated? One such story is Rekha’s. Check out my blog to find out how Rekha tackled the challenges the world threw at her head-on and came out stronger than ever before. Her resilience and determination are truly inspirational!
-              </p>                   
-                <a class="btn btn-main" href="blog-78.html">Read more</a>
+            <div class="clearfix">
+                <div id="blog-entries-container">
+                    <!-- Blog entries will be dynamically loaded here -->
+                </div>
             </div>
-          </div>
-        </article>
-
-
-      <article
-      class="col-md-4 col-sm-6 col-xs-12 mb-30 wow fadeInUp"
-      data-wow-duration="500ms"
-      data-wow-delay="200ms"
-    >
-      <div class="post-block">
-        <div id="gallery-post" class="media-wrapper">
-          <div class="item">
-            <img
-              src="images/blog/blog-79-1.png"
-              alt="blog post"
-              class="img-responsive"
-            />
-          </div>
+            <div class="all-post text-center">
+                <a class="btn btn-main" href="blog.html" style="color: white;">view more</a>
+            </div>
         </div>
-
-        <div class="content">
-          <h3>
-            <a href="blog-79.html">Embracing Embarrassment: The Price We Pay for Growth</a>
-          </h3>
-          <p>
-            Emphasizing the importance of embracing a rough start and the journey of learning. Check out my blog to understand the significance of persistence, the acceptance of imperfection, and the idea that looking "embarrassing" today may lead to becoming a better version tomorrow, highlighting the empowering notion that fear of looking stupid should not hinder personal development.
-          </p>                   
-            <a class="btn btn-main" href="blog-79.html">Read more</a>
-        </div>
-      </div>
-    </article>
-
-
-    <article
-    class="col-md-4 col-sm-6 col-xs-12 mb-30 wow fadeInUp"
-    data-wow-duration="500ms"
-    data-wow-delay="200ms"
-  >
-    <div class="post-block">
-      <div id="gallery-post" class="media-wrapper">
-        <div class="item">
-          <img
-            src="images/blog/blog-80-1.png"
-            alt="blog post"
-            class="img-responsive"
-          />
-        </div>
-      </div>
-
-      <div class="content">
-        <h3>
-          <a href="blog-80.html">MAKING FRIENDS</a
-          >
-        </h3>
-        <p>
-          Did you ever feel like you had many friends but no one you are actually close to? Did you feel like you had so much to say but no one to talk to? Whenever I felt this way I just wanted someone to tell me that I am not the only one. Read my blog and find out how I dealt with this and how I found some amazing friends!!
-        </p>                   
-          <a class="btn btn-main" href="blog-80.html">Read more</a>
-      </div>
     </div>
-  </article>
-
-
-
-
-            <!-- end single blog post -->
-          </div>
-          <div class="all-post text-center">
-            <a class="btn btn-main" href="blog.html" style="color: white;"
-              >view more</a
-            >
-          </div>
-        </div>
-        <!-- end row -->
-      </div>
-      <!-- end container -->
-    </section>
+</section>
     <!-- end section -->
 
     <section
