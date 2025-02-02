@@ -52,6 +52,11 @@
         .btn-main:hover {
             background-color: #d43f1b;
         }
+        .pagination .active .page-link {
+            background-color: #e54029;
+            border-color: #e54029;
+            color: #fff;
+        }
     </style>
 </head>
 <body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -99,16 +104,7 @@
                 <div id="blog-posts" class="row"></div>
             </div>
             <nav aria-label="Page navigation" class="text-center">
-                <ul class="pagination pagination-lg">
-                    <li><a class="active" href="blog.html">1</a></li>
-                    <li><a href="blogpage-2.html">2</a></li>
-                    <li><a href="blogpage-3.html">3</a></li>
-                    <li><a href="blogpage-4.html">4</a></li>
-                    <li><a href="blogpage-5.html">5</a></li>
-                    <li><a href="blogpage-6.html">6</a></li>
-                    <li><a href="blogpage-7.html">7</a></li>
-                    <li><a href="blogpage.html" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-                </ul>
+                <ul id="pagination" class="pagination pagination-lg"></ul>
             </nav>
         </div>
     </section>
@@ -165,12 +161,23 @@
         firebase.initializeApp(firebaseConfig);
         const db = firebase.firestore();
 
-        // Fetch and display blog posts
-        window.onload = function() {
-            const postsContainer = document.getElementById('blog-posts');
+        const postsPerPage = 6;
+        let currentPage = 1;
 
-            db.collection("blogposts").orderBy("date", "desc").limit(6).get().then((querySnapshot) => {
-                querySnapshot.forEach((doc) => {
+        // Fetch and display blog posts
+        function fetchBlogPosts(page) {
+            const postsContainer = document.getElementById('blog-posts');
+            postsContainer.innerHTML = '';
+
+            const offset = (page - 1) * postsPerPage;
+
+            db.collection("blogposts").orderBy("date", "desc").get().then((querySnapshot) => {
+                const totalPosts = querySnapshot.size;
+                const totalPages = Math.ceil(totalPosts / postsPerPage);
+
+                console.log(`Total Posts: ${totalPosts}, Total Pages: ${totalPages}`);
+
+                querySnapshot.docs.slice(offset, offset + postsPerPage).forEach((doc) => {
                     const postData = doc.data();
                     const postElement = document.createElement('div');
                     postElement.classList.add('col-md-4');
@@ -190,9 +197,38 @@
                     `;
                     postsContainer.appendChild(postElement);
                 });
+
+                generatePagination(totalPages);
             }).catch((error) => {
                 console.error("Error fetching blog posts: ", error);
             });
+        }
+
+        // Generate pagination links
+        function generatePagination(totalPages) {
+            const paginationContainer = document.getElementById('pagination');
+            paginationContainer.innerHTML = '';
+
+            console.log(`Generating pagination for ${totalPages} pages`);
+
+            for (let i = 1; i <= totalPages; i++) {
+                const pageItem = document.createElement('li');
+                pageItem.classList.add('page-item');
+                if (i === currentPage) {
+                    pageItem.classList.add('active');
+                }
+                pageItem.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+                pageItem.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    currentPage = i;
+                    fetchBlogPosts(currentPage);
+                });
+                paginationContainer.appendChild(pageItem);
+            }
+        }
+
+        window.onload = function() {
+            fetchBlogPosts(currentPage);
         };
     </script>
 </body>
